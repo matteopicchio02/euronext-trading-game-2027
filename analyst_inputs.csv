@@ -1,0 +1,4 @@
+yahoo_ticker,quality,valuation,catalyst
+# Fill with your own 0-100 judgements (100 = best). Blank = unknown. Document each in docs/decision_log.md.
+# Quality: ROIC, margin stability, balance sheet. Valuation: 100 = cheap vs own history and peers.
+# Catalyst: dated, identifiable events before 9 Apr 2027 (earnings revisions, buybacks, guidance, M&A).
