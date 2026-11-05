@@ -27,28 +27,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Diagnose portfolio fixture
-        run: |
-          echo "=== Repository root ==="
-          pwd
-          echo "=== Root files ==="
-          ls -la
-          echo "=== Data directory ==="
-          if [ -d data ]; then
-            ls -la data
-          else
-            echo "data directory is missing"
-          fi
-          echo "=== Search fixture ==="
-          find . -type f -name "portfolio_v1.csv" -print
-          echo "=== Required path ==="
-          if [ -f data/portfolio_v1.csv ]; then
-            echo "PASS: portfolio fixture found"
-          else
-            echo "FAIL: portfolio fixture missing"
-            exit 1
-          fi
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
