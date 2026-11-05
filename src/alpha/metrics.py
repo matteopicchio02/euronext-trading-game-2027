@@ -96,6 +96,35 @@ def sortino_ratio(returns: pd.Series, mar_annual: float = 0.0, periods: int = TR
     return float(excess.mean() / dd * np.sqrt(periods))
 
 
+WEEKS_PER_YEAR = 52
+
+
+def ex_ante_volatility(prices: pd.DataFrame, weights: pd.Series, weeks: int = 180) -> float:
+    """Annualised volatility of the CURRENT holdings from up to ``weeks`` weekly returns.
+
+    NextWise states that risk-adjusted performance is performance divided by ex-ante
+    volatility estimated over 180 weeks (about 3.5 years). Covariances use pairwise-complete
+    observations, so names with a shorter history still contribute what they have; check
+    ``history_weeks`` if a recent listing carries a large weight.
+    """
+    weekly = prices.sort_index().ffill().resample("W-FRI").last().pct_change().dropna(how="all")
+    weekly = weekly.tail(weeks)
+    w = weights.reindex(weekly.columns).fillna(0.0).to_numpy()
+    cov = weekly.cov().fillna(0.0).to_numpy() * WEEKS_PER_YEAR
+    return float(np.sqrt(max(w @ cov @ w, 0.0)))
+
+
+def history_weeks(prices: pd.DataFrame) -> pd.Series:
+    """Weeks of price history per ticker (to spot names too young for a 180-week window)."""
+    weekly = prices.sort_index().resample("W-FRI").last()
+    return weekly.notna().sum()
+
+
+def risk_adjusted_performance(performance: float, ex_ante_vol: float) -> float:
+    """Performance divided by ex-ante volatility (the platform's stated definition)."""
+    return float("nan") if ex_ante_vol <= 0 else float(performance / ex_ante_vol)
+
+
 def diversification_ratio(weights: pd.Series | np.ndarray, cov: pd.DataFrame | np.ndarray) -> float:
     """Weighted average asset volatility divided by portfolio volatility.
 
