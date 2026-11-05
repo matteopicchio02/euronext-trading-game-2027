@@ -77,7 +77,76 @@ def optimize_weights(
         constraints=cons,
         options={"maxiter": 500, "ftol": 1e-10},
     )
-    w = res.x if res.success else x0
-    w = pd.Series(np.clip(w, min_w, max_w), index=names)
-    w *= invested / w.sum()
-    return repair_ucits(w)
+  
+    # Fail closed: never return an invalid fallback portfolio.
+    # An unsuccessful optimizer is not a valid investment decision.
+    if not res.success:
+        raise ValueError(
+            "Optimization did not converge or constraints "
+            f"are infeasible: {res.message}"
+        )
+
+    w = pd.Series(res.x, index=names)
+
+    # Apply UCITS-style repair, then verify every constraint.
+    w = repair_ucits(w)
+
+    tol = 1e-5
+    problems = []
+
+    if not np.isfinite(w.to_numpy()).all():
+        problems.append("non-finite weight")
+
+    if abs(float(w.sum()) - invested) > tol:
+        problems.append(
+            f"invested fraction {w.sum():.6f} "
+            f"!= {invested:.6f}"
+        )
+
+    if (w < min_w - tol).any() or (w > max_w + tol).any():
+        problems.append("name weight bounds violated")
+
+    if sector_map is not None:
+        for sec in set(sector_map[t] for t in names):
+            sec_weight = float(
+                w[
+                    [t for t in names if sector_map[t] == sec]
+                ].sum()
+            )
+
+            if sec_weight > sector_cap + tol:
+                problems.append(
+                    f"sector {sec} {sec_weight:.3f} "
+                    f"> {sector_cap:.3f}"
+                )
+
+    if betas is not None and beta_band is not None:
+        pf_beta = (
+            float(w @ betas.reindex(names))
+            / float(w.sum())
+        )
+
+        if not (
+            beta_band[0] - tol
+            <= pf_beta
+            <= beta_band[1] + tol
+        ):
+            problems.append(
+                f"beta {pf_beta:.3f} outside {beta_band}"
+            )
+
+    from .ucits import check_ucits
+
+    if not check_ucits(w).compliant:
+        problems.append(
+            "UCITS-style constraint check failed"
+        )
+
+    if problems:
+        raise ValueError(
+            "Optimization output failed post-trade validation: "
+            + "; ".join(problems)
+        )
+
+    return w
+
