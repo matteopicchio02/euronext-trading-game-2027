@@ -1,0 +1,40 @@
+
+# Python caches and build outputs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Local Python environments
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local research output
+reports/research_outputs/
+
+# Private historical market data
+data/prices_eur_*.csv
+data/prices_real_*.csv
+data/eur_nok_aligned_*.csv
+data/fx_eurnok_*.csv
+data/price_audit_*.csv
+
+# Private operational records
+data/positions_*holdings_*.csv
+data/executions_*.csv
+data/daily_report_*.csv
+
+# Temporary files
+.DS_Store
+Thumbs.db
+*.tmp
