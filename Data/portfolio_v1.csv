@@ -1,27 +1,27 @@
 ticker,name,sector,role,weight,status
-ISP.MI,Intesa Sanpaolo,Financials,core,0.05,DRAFT - validate with screen and live prices
-UCG.MI,UniCredit,Financials,momentum,0.045,DRAFT - validate with screen and live prices
-INGA.AS,ING Groep,Financials,core,0.035,DRAFT - validate with screen and live prices
-G.MI,Generali,Financials,defensive,0.03,DRAFT - validate with screen and live prices
-SAF.PA,Safran,Industrials,core,0.045,DRAFT - validate with screen and live prices
-SU.PA,Schneider Electric,Industrials,core,0.04,DRAFT - validate with screen and live prices
-LDO.MI,Leonardo,Industrials,momentum,0.04,DRAFT - validate with screen and live prices
-PRY.MI,Prysmian,Industrials,momentum,0.035,DRAFT - validate with screen and live prices
-ASML.AS,ASML,Technology,beta,0.05,DRAFT - validate with screen and live prices
-CAP.PA,Capgemini,Technology,quality,0.045,DRAFT - validate with screen and live prices
-BESI.AS,BE Semiconductor,Technology,beta,0.035,DRAFT - validate with screen and live prices
-UCB.BR,UCB,Health Care,momentum,0.04,DRAFT - validate with screen and live prices
-EL.PA,EssilorLuxottica,Health Care,quality,0.04,DRAFT - validate with screen and live prices
-SAN.PA,Sanofi,Health Care,defensive,0.04,DRAFT - validate with screen and live prices
-ENI.MI,Eni,Energy,core,0.04,DRAFT - validate with screen and live prices
-EQNR.OL,Equinor,Energy,core,0.04,DRAFT - validate with screen and live prices
-RACE.MI,Ferrari,Consumer Discretionary,quality,0.04,DRAFT - validate with screen and live prices
-MONC.MI,Moncler,Consumer Discretionary,quality,0.03,DRAFT - validate with screen and live prices
-BN.PA,Danone,Consumer Staples,defensive,0.03,DRAFT - validate with screen and live prices
-AD.AS,Ahold Delhaize,Consumer Staples,defensive,0.03,DRAFT - validate with screen and live prices
-ENEL.MI,Enel,Utilities,defensive,0.03,DRAFT - validate with screen and live prices
-TRN.MI,Terna,Utilities,defensive,0.03,DRAFT - validate with screen and live prices
-AI.PA,Air Liquide,Basic Materials,quality,0.03,DRAFT - validate with screen and live prices
-MT.AS,ArcelorMittal,Basic Materials,cyclical,0.03,DRAFT - validate with screen and live prices
-ORA.PA,Orange,Telecommunications,income,0.03,DRAFT - validate with screen and live prices
-TEL.OL,Telenor,Telecommunications,income,0.03,DRAFT - validate with screen and live prices
+ISP.MI,Intesa Sanpaolo,Financials,core,0.05,DRAFT v1.1 - validate with screen and live prices
+UCG.MI,UniCredit,Financials,momentum,0.03,DRAFT v1.1 - validate with screen and live prices
+INGA.AS,ING Groep,Financials,core,0.05,DRAFT v1.1 - validate with screen and live prices
+SAF.PA,Safran,Industrials,core,0.045,DRAFT v1.1 - validate with screen and live prices
+SU.PA,Schneider Electric,Industrials,core,0.04,DRAFT v1.1 - validate with screen and live prices
+LDO.MI,Leonardo,Industrials,momentum,0.04,DRAFT v1.1 - validate with screen and live prices
+PRY.MI,Prysmian,Industrials,momentum,0.035,DRAFT v1.1 - validate with screen and live prices
+ASML.AS,ASML,Technology,beta,0.05,DRAFT v1.1 - validate with screen and live prices
+CAP.PA,Capgemini,Technology,quality,0.045,DRAFT v1.1 - validate with screen and live prices
+BESI.AS,BE Semiconductor,Technology,beta,0.035,DRAFT v1.1 - validate with screen and live prices
+UCB.BR,UCB,Health Care,momentum,0.04,DRAFT v1.1 - validate with screen and live prices
+EL.PA,EssilorLuxottica,Health Care,quality,0.04,DRAFT v1.1 - validate with screen and live prices
+SAN.PA,Sanofi,Health Care,defensive,0.04,DRAFT v1.1 - validate with screen and live prices
+ENI.MI,Eni,Energy,core,0.04,DRAFT v1.1 - validate with screen and live prices
+EQNR.OL,Equinor,Energy,core,0.04,DRAFT v1.1 - validate with screen and live prices
+RACE.MI,Ferrari,Consumer Discretionary,quality,0.04,DRAFT v1.1 - validate with screen and live prices
+MONC.MI,Moncler,Consumer Discretionary,quality,0.03,DRAFT v1.1 - validate with screen and live prices
+BN.PA,Danone,Consumer Staples,defensive,0.03,DRAFT v1.1 - validate with screen and live prices
+AD.AS,Ahold Delhaize,Consumer Staples,defensive,0.03,DRAFT v1.1 - validate with screen and live prices
+ENEL.MI,Enel,Utilities,defensive,0.03,DRAFT v1.1 - validate with screen and live prices
+AI.PA,Air Liquide,Basic Materials,quality,0.03,DRAFT v1.1 - validate with screen and live prices
+MT.AS,ArcelorMittal,Basic Materials,cyclical,0.03,DRAFT v1.1 - validate with screen and live prices
+ORA.PA,Orange,Telecommunications,income,0.03,DRAFT v1.1 - validate with screen and live prices
+TEL.OL,Telenor,Telecommunications,income,0.03,DRAFT v1.1 - validate with screen and live prices
+ENX.PA,Euronext,Financials,quality,0.03,DRAFT v1.1 - validate with screen and live prices
+EDP.LS,EDP,Utilities,defensive,0.03,DRAFT v1.1 - validate with screen and live prices
