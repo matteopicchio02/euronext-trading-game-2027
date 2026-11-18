@@ -48,7 +48,7 @@ def test_portfolio_v1_passes_ranking_date_report():
     sectors = dict(zip(wl.yahoo_ticker, wl.sector))
     checks = ranking_date_report(pf.set_index("ticker")["weight"], sectors)
     text = format_report(checks)
-    assert text.startswith("Ranking-date thresholds: ALL PASS")
+    assert text.startswith("NextWise diversification guidance (NOT official ETG certification): PASS")
     assert all(c.passed for c in checks)
 
 
