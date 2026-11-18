@@ -55,4 +55,14 @@ So 8% marks an ordinary bad stretch (review, cheap) and 13% a genuinely bad one 
 
 * Walk-forward: set weights on data up to date T, evaluate on T to T+3 months, roll forward.
 * Report the hit rate, rank IC and turnover, not only the return.
-* Keep every decision in `docs/decision_log.md` so the result can be audited against the process.
+* Keep every decision in `docs/governance/DECISION_LOG.md` so the result can be audited against the process.
+
+## 7. Actual-portfolio checkpoint: 18 November 2026
+
+The original 26-name `data/portfolio_v1.csv` and the synthetic competitor Monte Carlo remain **historical research fixtures**. The actual NextWise 18 November snapshot has **21 equities** and 19.29% cash, recorded in `data/portfolio_actual_2026-11-18.csv`.
+
+Two separate price pipelines previously yielded annualized volatility estimates of **8.88%** and **9.05%**. These values cannot be combined as a single point estimate without reconciling the input price panel, adjustment methods and covariance horizon.
+
+The rolling OOS script `scripts/alpha_oos_validation.py` uses EUR daily returns exported separately from Colab. Although the optimizer in each historical fold uses only preceding observations, selecting the portfolio's 21 constituents **with knowledge of the evaluation date creates selection/survivorship bias**. Its constant-weight daily-rebalanced returns are hypothetical, not real NextWise track record or validated alpha forecasts.
+
+The 10/4/15 guidelines, HHI and UCITS proxies, and the 35% Paris-listing concentration monitor are **not guaranteed official Euronext scoring conditions**; see [Rules and uncertainty](../governance/RULES_VERIFIED.md).
