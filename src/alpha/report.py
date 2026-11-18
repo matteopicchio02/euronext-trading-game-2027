@@ -52,7 +52,7 @@ def to_markdown(snap: dict, title: str = "Weekly Portfolio Report", as_of: date 
     lines = [
         f"# {title} - {as_of.isoformat()}",
         "",
-        "> Independent educational project. Not affiliated with Euronext or any bank. Not investment advice.",
+        "> Virtual educational research, not affiliated with Euronext or any bank. Historical constant-weight metrics, NOT executed NextWise account P&L or official scores.",
         "",
         "## Key metrics",
         "",
