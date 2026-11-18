@@ -1,4 +1,4 @@
-Ranking-date thresholds: ALL PASS
+NextWise diversification guidance (NOT official ETG certification): PASS
 
 | Check | Result | Value | Limit |
 |---|---|---|---|
