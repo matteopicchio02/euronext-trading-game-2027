@@ -10,9 +10,9 @@ describes diversification guidance; this is NOT a certified ETG eligibility test
 
 These guidelines are NOT proven hard eligibility rules for this Euronext edition. Re-check the current NextWise and Euronext rules before interpreting the result.
 
-ETFs: HHI, diversification ratio and sectors are assessed with look-through on the platform.
-We do not model look-through here, so ETF positions count as one security each and add no
-sector (a conservative reading).
+ETF look-through and sector treatment can differ in the live platform. This
+code models ETF holdings as one position with no extra sectors. That is a research
+simplification, not a verified scoring implementation.
 """
 
 from __future__ import annotations
