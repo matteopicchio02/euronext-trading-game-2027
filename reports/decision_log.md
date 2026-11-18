@@ -1,13 +1,5 @@
-# Decision log
+# Decision Log moved
 
-One row per decision, written **before** the order. Review the log every month: process quality first, then outcome.
+**This is no longer an editable decision register.** The canonical, dated decision log lives in [docs/governance/DECISION_LOG.md](../docs/governance/DECISION_LOG.md), with the [18 November 2026 committee memo](../docs/governance/DECISION_2026-11-18.md).
 
-| Date | Ticker | Action | From -> to weight | Reason (one line) | Memo | Mode | Outcome after 4 weeks | Lesson |
-|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | |
-
-## Monthly review questions
-1. Which decisions followed the process and lost? (fine) Which broke it and won? (dangerous)
-2. Did momentum, catalyst, quality, downside scores rank-correlate with subsequent returns?
-3. Did I add risk in CAUTION or DEFENSE? Why?
-4. What changes to the policy are justified by data, not by the last two weeks?
+The old empty table was a template and was never evidence of live NextWise execution. Future updates belong in the canonical file only.
