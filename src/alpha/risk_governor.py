@@ -4,7 +4,7 @@ A national title goes to ONE participant, so the payoff is convex in rank: stand
 the middle is worth little. The governor therefore changes the risk budget with (a) the
 drawdown, (b) our rank percentile and (c) the time left, instead of using one static limit.
 
-Thresholds are working hypotheses, calibrated in docs/METHODOLOGY.md against the simulated
+Thresholds are working hypotheses, calibrated in docs/methodology/METHODOLOGY.md against the simulated
 distribution of drawdowns for a ~17% volatility equity book (they are NOT Euronext rules).
 """
 
