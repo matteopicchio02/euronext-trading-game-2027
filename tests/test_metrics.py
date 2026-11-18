@@ -62,3 +62,14 @@ def test_portfolio_returns_cash_earns_zero():
     r = pd.DataFrame({"a": [0.10, 0.10]})
     pr = m.portfolio_returns(r, pd.Series({"a": 0.5}))
     assert pr.iloc[0] == pytest.approx(0.05)
+
+def test_portfolio_returns_rejects_missing_active_data():
+    r = pd.DataFrame({"a": [0.01, np.nan], "b": [0.02, 0.03]})
+    with pytest.raises(ValueError, match="Missing historical returns"):
+        m.portfolio_returns(r, pd.Series({"a": 0.5, "b": 0.4}))
+
+
+def test_portfolio_returns_rejects_missing_active_ticker():
+    r = pd.DataFrame({"b": [0.02, 0.03]})
+    with pytest.raises(ValueError, match="Missing active holdings"):
+        m.portfolio_returns(r, pd.Series({"a": 0.5, "b": 0.4}))
