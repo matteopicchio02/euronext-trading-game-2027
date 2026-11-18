@@ -7,6 +7,9 @@ Research project for the virtual Euronext Trading Game. The **current 18 Novembe
 - [Verified vs working rules](governance/RULES_VERIFIED.md): official sources, NextWise guidance, unresolved questions
 - [**Canonical Decision Log**](governance/DECISION_LOG.md): decisions and follow-ups
 - [**18 November 2026 Committee Memo**](governance/DECISION_2026-11-18.md): risk/return trade-off and HOLD decision
+- [Chronology since October](governance/PROJECT_TIMELINE_2026.md): prior project milestones, distinct from fills
+- [Repository quality audit](governance/REPOSITORY_AUDIT_2026-11-18.md): repairs, CI and open limitations
+- [Research run registry](../reports/research/RESEARCH_REGISTER_2026-11-18.md): recorded November 18 models and input provenance
 
 ## Quantitative research
 - [Methodology](methodology/METHODOLOGY.md): factor and portfolio models, assumptions
