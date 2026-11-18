@@ -23,6 +23,10 @@ venv/
 reports/research_outputs/
 
 # Private historical market data
+ALPHA_daily_returns.csv
+ALPHA_covariance_matrix.csv
+ALPHA_correlation_matrix.csv
+reports/research/oos_*/
 data/prices_eur_*.csv
 data/prices_real_*.csv
 data/eur_nok_aligned_*.csv
