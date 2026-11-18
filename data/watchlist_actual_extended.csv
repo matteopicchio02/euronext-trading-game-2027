@@ -1,0 +1,61 @@
+yahoo_ticker,name,country,sector,role,theme
+ASML.AS,ASML,NL,Technology,beta,Semicap leader; AI-capex sentiment sensitive
+ASM.AS,ASM International,NL,Technology,beta,Semicap; high beta to AI/semis cycle
+BESI.AS,BE Semiconductor,NL,Technology,beta,Hybrid bonding; very high beta
+STMPA.PA,STMicroelectronics,FR,Technology,cyclical,Reports 29 Oct; auto/industrial semis
+CAP.PA,Capgemini,FR,Technology,quality,IT services; defensive-growth tech
+DSY.PA,Dassault Systemes,FR,Technology,quality,Software; rate-sensitive
+SAF.PA,Safran,FR,Industrials,core,Aero engines; aftermarket compounding
+AIR.PA,Airbus,NL,Industrials,core,Commercial aero; delivery-driven
+SU.PA,Schneider Electric,FR,Industrials,core,Electrification; data-centre exposure
+LR.PA,Legrand,FR,Industrials,quality,Electrical; data-centre exposure
+LDO.MI,Leonardo,IT,Industrials,momentum,Defence; European rearmament theme
+PRY.MI,Prysmian,IT,Industrials,momentum,Cables; grid and data-centre capex; reported 28 Oct
+HO.PA,Thales,FR,Industrials,core,Defence electronics
+KOG.OL,Kongsberg Gruppen,NO,Industrials,momentum,Defence and maritime
+SGO.PA,Saint-Gobain,FR,Industrials,cyclical,Building materials; European capex
+ISP.MI,Intesa Sanpaolo,IT,Financials,core,Italian bank; reports 30 Oct; rates beneficiary
+UCG.MI,UniCredit,IT,Financials,momentum,Italian bank; buyback and M&A optionality
+BNP.PA,BNP Paribas,FR,Financials,cyclical,French bank; France spread risk
+INGA.AS,ING Groep,NL,Financials,core,Dutch bank; rates beneficiary
+BAMI.MI,Banco BPM,IT,Financials,momentum,Italian bank; consolidation story
+G.MI,Generali,IT,Financials,defensive,Insurer; lower beta than banks
+CS.PA,AXA,FR,Financials,defensive,Insurer; capital return
+ENX.PA,Euronext,FR,Financials,quality,Exchange; volume-driven revenue
+PST.MI,Poste Italiane,IT,Financials,income,Diversified financial/insurance/postal
+ARGX.BR,argenx,BE,Health Care,beta,Biotech; event-driven
+EL.PA,EssilorLuxottica,FR,Health Care,quality,Eyewear; smart-glasses optionality
+SAN.PA,Sanofi,FR,Health Care,defensive,Pharma; pipeline-driven
+UCB.BR,UCB,BE,Health Care,momentum,Raised 2026 guidance on 22 Oct
+AMP.MI,Amplifon,IT,Health Care,quality,Hearing care; reports 29 Oct
+REC.MI,Recordati,IT,Health Care,defensive,Pharma; stable cash flows
+ENI.MI,Eni,IT,Energy,core,Integrated oil and gas; oil hedge
+TTE.PA,TotalEnergies,FR,Energy,core,Integrated oil and gas; oil hedge
+TEN.MI,Tenaris,IT,Energy,cyclical,OCTG pipes; oil capex
+EQNR.OL,Equinor,NO,Energy,core,Gas and oil; European gas exposure
+AKRBP.OL,Aker BP,NO,Energy,beta,High beta to oil price
+ENEL.MI,Enel,IT,Utilities,defensive,Utility; grid investment
+TRN.MI,Terna,IT,Utilities,defensive,Grid operator; regulated
+SRG.MI,Snam,IT,Utilities,defensive,Gas network; regulated
+IG.MI,Italgas,IT,Utilities,defensive,Gas distribution; reports 29 Oct
+EDP.LS,EDP,PT,Utilities,defensive,Iberian utility and renewables
+RACE.MI,Ferrari,IT,Consumer Discretionary,quality,Luxury autos; pricing power
+MONC.MI,Moncler,IT,Consumer Discretionary,quality,Premium apparel
+MC.PA,LVMH,FR,Consumer Discretionary,cyclical,Luxury; China-sensitive
+RMS.PA,Hermes,FR,Consumer Discretionary,quality,Fell 7% on 22 Oct revenue miss
+BC.MI,Brunello Cucinelli,IT,Consumer Discretionary,quality,High-end apparel
+ML.PA,Michelin,FR,Consumer Discretionary,cyclical,Tyres; cost-driven margins
+BN.PA,Danone,FR,Consumer Staples,defensive,Food; defensive
+HEIA.AS,Heineken,NL,Consumer Staples,defensive,Beer; defensive
+CPR.MI,Campari,IT,Consumer Staples,cyclical,Spirits; reported 28 Oct
+AD.AS,Ahold Delhaize,NL,Consumer Staples,defensive,Food retail
+OR.PA,L'Oreal,FR,Consumer Staples,quality,Beauty; quality compounder
+AI.PA,Air Liquide,FR,Basic Materials,quality,Industrial gases
+MT.AS,ArcelorMittal,NL,Basic Materials,cyclical,Steel; high beta
+YAR.OL,Yara,NO,Basic Materials,cyclical,Fertilisers
+UMI.BR,Umicore,BE,Basic Materials,cyclical,Battery and recycling materials
+ORA.PA,Orange,FR,Telecommunications,income,Telecom; defensive yield
+INW.MI,Inwit,IT,Telecommunications,income,Towers; rate-sensitive
+KPN.AS,KPN,NL,Telecommunications,defensive,Dutch telecom
+TEL.OL,Telenor,NO,Telecommunications,income,Nordic telecom
+LI.PA,Klépierre,FR,Real Estate,,

@@ -1,0 +1,22 @@
+ticker,name,sector,weight,quantity,purchase_price_display,market_value_eur,pnl_eur,status
+AI.PA,Air Liquide,Basic Materials,0.04538804638715433,12,184.64,2276.88,61.2,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+AIR.PA,Airbus,Industrials,0.027598263721039178,7,209.48,1384.46,-81.87,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+CS.PA,AXA,Financials,0.04283565651179364,47,43.03,2148.84,126.43,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+CAP.PA,Capgemini,Technology,0.035657508509461325,15,126.75,1788.75,-112.5,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+DSY.PA,Dassault Systèmes,Technology,0.042071374819968206,90,25.49,2110.5,-183.78,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+EDP.LS,EDP,Utilities,0.04121738870421959,420,4.86,2067.66,28.14,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+ENI.MI,Eni,Energy,0.02736044732606063,55,25.18,1372.53,-12.38,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+EQNR.OL,Equinor,Energy,0.03611240961033395,49,421.8,1811.57,-181.46,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+ENX.PA,Euronext,Financials,0.03961347360447326,12,165.61,1987.2,-0.1,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+RACE.MI,Ferrari,Consumer Discretionary,0.03734195824757424,5,366.05,1873.25,43.0,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+G.MI,Generali,Financials,0.045132887136883966,52,42.36,2264.08,61.36,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+HEIA.AS,Heineken,Consumer Staples,0.048652490045300735,29,79.5,2440.64,135.14,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+LI.PA,Klépierre,Real Estate,0.010471097732969864,14,37.56,525.28,-0.56,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+KPN.AS,KPN,Telecommunications,0.040190970751374226,462,4.28,2016.17,38.81,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+OR.PA,L’Oréal,Consumer Staples,0.0441594944657354,5,435.6,2215.25,37.25,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+ML.PA,Michelin,Consumer Discretionary,0.039821587867975024,62,32.15,1997.64,4.34,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+PRY.MI,Prysmian,Industrials,0.038734370250026164,18,110.25,1943.1,-41.4,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+SAN.PA,Sanofi,Health Care,0.04298336979652047,25,78.92,2156.25,183.25,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+SRG.MI,Snam,Utilities,0.040629725055940674,336,6.15,2038.18,-27.55,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+TTE.PA,TotalEnergies,Energy,0.041364902645782145,26,84.99,2075.06,-134.68,ACTUAL snapshot 2026-11-18; from NextWise screenshots
+UCB.BR,UCB,Health Care,0.03978291529410592,7,278.4,1995.7,46.9,ACTUAL snapshot 2026-11-18; from NextWise screenshots
