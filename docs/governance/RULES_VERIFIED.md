@@ -1,37 +1,36 @@
-# Rules: what is verified and what is not
+# Project Alpha 2027 — Rules, guidance and uncertainty
+**Last reviewed: 18 November 2026.** Distinguish published ETG rules, NextWise educational guidance, and our internal portfolio policy.
 
-Sources: Euronext Trading Game page (terms last updated 21 Sep 2026) and the Euronext/NextWise info sheet.
-Check the live terms in NextWise before relying on any line below; rules can change.
+## Verified from Euronext materials
+Primary source: [Euronext Trading Game official rules](https://live.euronext.com/en/education/euronext-trading-game) (2026–2027 edition); supporting [NextWise rules](https://www.nextwise.fr/le-reglement).
 
-## Verified (published)
+- Competition runs **5 October 2026 – 9 April 2027**; national winners announced **16 April 2027**; individual European pitch **28 April 2027**.
+- Individual virtual endowment **EUR 50,000** (club **EUR 200,000**); securities include equities and ETFs listed across seven Euronext exchanges.
+- Derivatives/options excluded; inverse ETFs eligible; penny stocks excluded. Market and limit order functions use delayed quotations and zero simulated commissions.
+- National selection uses **six published quantitative criteria**: gross performance, risk-adjusted performance, Herfindahl–Hirschman index, sector breadth, diversification ratio, and UCITS-rule compliance. The relative weights are not published in the sources reviewed.
+- The European final evaluates strategy and execution through an investment pitch.
 
-| Item | Rule |
-|---|---|
-| Edition | 5 Oct 2026 - 9 Apr 2027; local winners announced 16 Apr; European individual pitch battle 28 Apr 2027 |
-| Eligibility | Students enrolled in higher education in BE, FR, GR, IE, IT, NL, NO, PT; proof of enrolment may be requested; one account only |
-| Capital | EUR 50,000 virtual per individual (clubs: EUR 200,000) |
-| Universe | Equities and ETFs on Euronext markets (Paris, Amsterdam, Lisbon, Oslo, Dublin, Milan, Brussels); inverse ETFs allowed; penny stocks excluded; no derivatives or options |
-| Costs and data | No transaction fees; market data delayed 15 minutes; market and limit orders |
-| Limits | No published per-position, sector or turnover limits |
-| Scoring (stage 1) | Gross performance, risk-adjusted performance, HHI, number of sectors covered, diversification ratio, compliance with UCITS rules |
-| Stage 2 | National winners pitch to a Euronext jury: thesis, strategy, construction, execution; presentation quality |
-| Club feature | An individual can entrust EUR 3,000-30,000 to one or more clubs (not their own) |
+## NextWise-specific information and guidance
+- [NextWise selection criteria for individuals](https://www.nextwise.fr/criteres-de-selection-profil-individuel) describes **10 securities, 4 sectors and no more than 15% in one name as recommended diversification practices**. **Do not label them proven hard disqualification conditions for the Euronext edition.**
+- [NextWise rules](https://www.nextwise.fr/le-reglement) describes both a **monthly** and a **general** ranking for individual participants. The actual user-visible Italian ranking becomes available at **month-end**, not each day; precise cut-offs and display timings should be checked in the app.
+- NextWise refers to the **Sharpe ratio** in its risk-adjusted criterion description, whereas the Euronext published list says *risk-adjusted performance*. Do **not** assume our particular 180-week historical-volatility computation matches the official formula without confirmation.
+- The NextWise material describes UCITS 5/10/40 in the context of scoring. Our code is a **simplified proxy**; it does not perform fund look-through, all issuer grouping, or certify compliance with actual investment regulation.
+- The Next Challenge and Euronext Trading Game can have **different scoring features**. Quiz/chat/social engagement points must not silently be added to the official six ETG criteria.
 
-## NOT published (ask the organisers)
+## Research-only house assumptions — not verified rules
+- `src/alpha/rules.py` checks the **10/4/15 guidelines**, intentionally as an advisory proxy.
+- Sector mapping is an 11-category internal classification, not confirmed as the score provider's exact ICB implementation.
+- HHI convention (invested-normalized, cash as a separate line, ETF look-through) is unresolved; report conventions explicitly.
+- UCITS proxy: 5/10/40 direct-issuer check and 20% ETF line cap, with caveats.
+- Maximum 35% in **Paris-listed** securities is an internal research cap; **listing exchange does not represent economic country-risk**.
+- The 96% equity / 4% cash **neutral target** is a historical internal baseline. The 18 November actual snapshot is **80.71% equity / 19.29% cash**; the HOLD decision did not authorize forced rebalancing.
 
-1. Weight of each of the six criteria and how they are normalised (percentile rank? z-score?).
-2. How performance is measured for an individual who starts trading after 5 Oct: from the registration date, from 5 Oct, or from first trade?
-3. Definition of "risk-adjusted performance" (Sharpe? Sortino? return/vol?) and the window used.
-4. How HHI is computed: on invested positions only, or including cash? Is an ETF one position or looked through?
-5. Which sector classification is used (ICB industries? GICS?) and how a multi-sector ETF counts.
-6. What "UCITS compliance" tests (5/10/40? ETF limits? cash?) and whether it is pass/fail or graded.
-7. Definition of "penny stock".
-8. Whether entrusting money to a club removes it from the individual portfolio (and from the individual score).
-9. Whether the individual national ranking is public and how often it updates.
+## Still needs organizer/platform confirmation
+1. Exact normalization and weights of the six ETG criteria.
+2. Official risk-adjusted metric calculation (return horizon, risk-free assumption, vol estimator and corporate actions).
+3. Whether cash and ETF look-through affect HHI, diversification ratio and UCITS test.
+4. Exact sector taxonomy, market data timestamp and monthly cut-off.
+5. How dividends and FX adjustments enter the P&L and performance reference.
+6. Any exceptional eligibility filters and how they affect scoring.
 
-## Working assumptions used in this repository
-
-* Sector classification: ICB-style 11 industries (the watchlist covers 10; Real Estate is excluded because of the rate backdrop).
-* HHI on invested positions (normalised); ETFs counted as one position.
-* UCITS: 5/10/40 on equities and 20% cap on any single ETF.
-* Every assumption is a hypothesis; update this file as soon as the organisers answer.
+**Operational rule:** label all compliance screens “research/guideline checks”, not official certification. Reverify current terms before decisions; no model grants permission to trade.
