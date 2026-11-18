@@ -1,26 +1,28 @@
-# Project Alpha 2027 — Documentation
+# Project Alpha 2027 — Documentation index
 
-This directory contains the research documentation for Project Alpha 2027, a quantitative portfolio management project developed during the Euronext Trading Game.
+Research project for the virtual Euronext Trading Game. The **current 18 November 2026 snapshot** is distinct from the original 26-name draft and from the older November 4 historical notebooks.
 
-## Documentation Structure
+## Governance
+- [Investment Policy](governance/INVESTMENT_POLICY.md): self-imposed policy targets and documented exceptions
+- [Verified vs working rules](governance/RULES_VERIFIED.md): official sources, NextWise guidance, unresolved questions
+- [**Canonical Decision Log**](governance/DECISION_LOG.md): decisions and follow-ups
+- [**18 November 2026 Committee Memo**](governance/DECISION_2026-11-18.md): risk/return trade-off and HOLD decision
 
-- **Strategy Manual:** theoretical foundations and the investment methodology.
-- **Investment Policy:** portfolio objectives, allocation principles and constraints.
-- **Quantitative Methodology:** momentum, volatility, covariance, downside risk and diversification metrics.
-- **Risk Management:** portfolio concentration, diversification ratio, CVaR, drawdown and stress testing.
-- **Investment Research:** historical analysis, portfolio construction and model validation.
-- **Decision Log:** documentation of portfolio decisions and execution reviews.
+## Quantitative research
+- [Methodology](methodology/METHODOLOGY.md): factor and portfolio models, assumptions
+- [Research Design](methodology/RESEARCH_DESIGN.md): historical notebooks, selection bias, validation conditions
+- [Data Dictionary](methodology/DATA_DICTIONARY.md): columns, sources and valuation conventions
+- [Current 21-name audit](../reports/AUDIT_2026-11-18.md)
+- [Historical synthetic-simulation report](../reports/backtesting/SIMULATION_RESULTS.md)
+- [Historical portfolio-construction notebooks](../notebooks/README.md)
 
-## Methodological Principles
+## Templates
+- [Investment memo](templates/INVESTMENT_MEMO_TEMPLATE.md)
+- [Decision log template](templates/DECISION_LOG_TEMPLATE.md)
+- [Weekly report template](templates/WEEKLY_REPORT_TEMPLATE.md)
 
-Project Alpha combines systematic equity screening with constrained portfolio construction and risk monitoring.
+## Archival/manual documentation
+- [Historical Project Alpha manual](PROJECT_ALPHA_2027_MANUALE_COMPLETO.pdf): created before the current 21-name snapshot; **do not use historical positions as current holdings**.
 
-Historical simulations are used to assess portfolio characteristics, but are not considered guarantees of future performance.
-
-The project distinguishes simulated allocations from actual executed transactions and official platform valuations.
-
-## Status
-
-Active research and development — Euronext Trading Game 2026–2027.
-
-Detailed trading decisions and current portfolio information are maintained privately during the competition.
+## Important boundaries
+Portfolio and performance values in the project are **virtual**. Model returns, risk estimates and rule checks are not official NextWise scores, nor evidence of trade execution. As of 18 November 2026, there is **no intramonth ranking update**. Full market-history files are kept outside this repository unless explicitly provided with a reproducible provenance.
