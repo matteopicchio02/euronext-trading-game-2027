@@ -28,7 +28,15 @@ The source notebook and contemporary outputs report 59 securities, 1,046 aligned
 - Data-vendor adjusted prices versus venue execution/settlement prices.
 - Nonstationarity, corporate actions, thin left-tail CVaR samples and correlated factor exposures.
 - In-sample optimization and overfitting across thousands of portfolio combinations.
-- Genuine walk-forward / out-of-sample research, transaction costs, benchmark attribution and score-function calibration are not yet implemented.
+- A retrospective chronological holdout and rolling-window optimizer diagnostic were added on 18 November 2026 in `scripts/alpha_oos_validation.py`. The selected 21 holdings were known at the evaluation date, so this is NOT a fully independent OOS track record; historical membership reconstruction, transaction-cost validation, benchmark attribution and official score calibration remain unimplemented.
 
 ## 6. Research artefact status
 This repository distinguishes a **research prototype** (original `src/alpha/`), a **historical operational research workflow** (the four notebooks), and **official actual trading records** (NextWise account data). The notebook outputs must not be used to represent live execution instructions.
+
+## 7. The 18 November 2026 live-snapshot boundary
+
+`data/portfolio_actual_2026-11-18.csv` records a **valuation snapshot transcribed from 21 NextWise cards**, not actual trade confirmations or the full transaction ledger. The old 17-position portfolio studied in historical November 4 notebooks, the planned 26-name `portfolio_v1.csv` and the 21 current positions are different information sets.
+
+The complete EUR returns used for the November 18 diagnostics were exported from Google Colab and **are not committed** to the current repository. To reproduce, supply the return CSV to `scripts/alpha_oos_validation.py --returns <file.csv>`. Do not claim the OOS package is fully reproducible solely by cloning the GitHub repository.
+
+See the [canonical committee decision](../governance/DECISION_2026-11-18.md) and [decision log](../governance/DECISION_LOG.md).
