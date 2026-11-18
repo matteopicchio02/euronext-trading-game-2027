@@ -34,7 +34,7 @@ The 26-name file **`data/portfolio_v1.csv` is an archived DRAFT**, not today's h
 | `docs/methodology/` | Research methods, data dictionary, documented limitations |
 | `docs/templates/` | Memo and weekly-report templates |
 
-**Canonical records:** [Decision log](docs/governance/DECISION_LOG.md) · [18 November committee memo](docs/governance/DECISION_2026-11-18.md) · [Snapshot audit](reports/AUDIT_2026-11-18.md) · [Rules and uncertainty](docs/governance/RULES_VERIFIED.md) · [Data dictionary](docs/methodology/DATA_DICTIONARY.md).
+**Canonical records:** [Decision log](docs/governance/DECISION_LOG.md) · [18 November committee memo](docs/governance/DECISION_2026-11-18.md) · [Project timeline](docs/governance/PROJECT_TIMELINE_2026.md) · [Repository quality audit](docs/governance/REPOSITORY_AUDIT_2026-11-18.md) · [Research run registry](reports/research/RESEARCH_REGISTER_2026-11-18.md) · [Snapshot audit](reports/AUDIT_2026-11-18.md) · [Rules and uncertainty](docs/governance/RULES_VERIFIED.md) · [Data dictionary](docs/methodology/DATA_DICTIONARY.md).
 
 ## Quick start (Windows PowerShell / Google Colab)
 
