@@ -1,0 +1,25 @@
+Ranking-date thresholds: ALL PASS
+
+| Check | Result | Value | Limit |
+|---|---|---|---|
+| Securities held | pass | 21 | >= 10 |
+| Sectors covered | pass | 11 | >= 4 |
+| Largest position | pass | 4.87% | <= 15% |
+| UCITS 5/10/40 (scored) | pass | max 4.87%, above-5% sum 0.00% | single <= 10%, above-5% sum <= 40% |
+| HHI (informational) | pass | 0.0497 (effective N 20.1) | lower is better |
+
+Invested 80.7%, cash 19.3%
+
+Sector weights:
+ticker
+Financials                12.8%
+Energy                    10.5%
+Consumer Staples           9.3%
+Health Care                8.3%
+Utilities                  8.2%
+Technology                 7.8%
+Consumer Discretionary     7.7%
+Industrials                6.6%
+Basic Materials            4.5%
+Telecommunications         4.0%
+Real Estate                1.0%
