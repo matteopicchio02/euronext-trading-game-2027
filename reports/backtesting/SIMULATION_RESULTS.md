@@ -1,4 +1,6 @@
-# Simulation results (synthetic data)
+# Simulation results — synthetic experiment (NOT a forecast)
+
+> **Archived research only.** All prices, portfolio returns, score weights, and competitor mixes below are assumed or synthetic. Entries such as `P(top 1%) = 15.7%` are frequencies within a simulated field of 400 hypothetical peers, **not** a probability of winning the real Euronext Trading Game. These experiments predate the actual 21-name portfolio of 18 November 2026.
 
 Generated with `python scripts/run_simulation.py --worlds 200 --field 400 --rho 0.2 --seed 7` (about 4-5 minutes on 2 CPU cores).
 
