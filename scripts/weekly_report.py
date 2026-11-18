@@ -30,7 +30,7 @@ def main() -> None:
     wl = pd.read_csv(args.watchlist)
     sectors = dict(zip(wl.yahoo_ticker, wl.sector))
     snap = portfolio_snapshot(pf, prices, sectors)
-    text = to_markdown(snap)
+    text = to_markdown(snap, as_of=prices.index.max().date())
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(text)
     print(text)
