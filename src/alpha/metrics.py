@@ -21,7 +21,7 @@ TRADING_DAYS = 252
 
 def simple_returns(prices: pd.DataFrame | pd.Series) -> pd.DataFrame | pd.Series:
     """Daily simple returns from a price table, dropping the all-NaN first row."""
-    return prices.pct_change().dropna(how="all")
+    return prices.pct_change(fill_method=None).dropna(how="all")
 
 
 def portfolio_returns(asset_returns: pd.DataFrame, weights: pd.Series) -> pd.Series:
