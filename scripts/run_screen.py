@@ -82,7 +82,7 @@ def main() -> None:
     names = dict(zip(wl.yahoo_ticker, wl.name))
     for t, wt in w.sort_values(ascending=False).items():
         out.append(f"| {t} | {names[t]} | {sectors[t]} | {wt:.2%} | {table.loc[t, 'score']:.0f} |")
-    out += ["", to_markdown(snap, "Proposed portfolio analytics")]
+    out += ["", to_markdown(snap, "Proposed portfolio analytics — NOT executed holdings", as_of=prices.index.max().date())]
     text = "\n".join(out)
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(text)
