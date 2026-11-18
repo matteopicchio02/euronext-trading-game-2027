@@ -25,7 +25,13 @@ def simple_returns(prices: pd.DataFrame | pd.Series) -> pd.DataFrame | pd.Series
 
 
 def portfolio_returns(asset_returns: pd.DataFrame, weights: pd.Series) -> pd.Series:
-    """Daily portfolio return for constant weights; missing assets get weight 0."""
+    """Daily portfolio return for constant weights. Fail rather than hide missing active-asset data."""
+    held = weights[weights > 0]
+    missing = held.index.difference(asset_returns.columns)
+    if len(missing):
+        raise ValueError(f"Missing active holdings in returns: {missing.tolist()}")
+    if asset_returns[held.index].isna().any().any():
+        raise ValueError("Missing historical returns for active positions; check data quality")
     w = weights.reindex(asset_returns.columns).fillna(0.0)
     return asset_returns.fillna(0.0).mul(w, axis=1).sum(axis=1)
 
@@ -102,12 +108,11 @@ WEEKS_PER_YEAR = 52
 def ex_ante_volatility(prices: pd.DataFrame, weights: pd.Series, weeks: int = 180) -> float:
     """Annualised volatility of the CURRENT holdings from up to ``weeks`` weekly returns.
 
-    NextWise states that risk-adjusted performance is performance divided by ex-ante
-    volatility estimated over 180 weeks (about 3.5 years). Covariances use pairwise-complete
-    observations, so names with a shorter history still contribute what they have; check
-    ``history_weeks`` if a recent listing carries a large weight.
+    This is a RESEARCH proxy using up to 180 weeks (~3.5 years), not a confirmed
+    NextWise/Euronext risk-adjusted performance formula. Covariances use pairwise-complete
+    observations; inspect history_weeks if some holdings have insufficient data.
     """
-    weekly = prices.sort_index().ffill().resample("W-FRI").last().pct_change().dropna(how="all")
+    weekly = prices.sort_index().resample("W-FRI").last().pct_change(fill_method=None).dropna(how="all")
     weekly = weekly.tail(weeks)
     w = weights.reindex(weekly.columns).fillna(0.0).to_numpy()
     cov = weekly.cov().fillna(0.0).to_numpy() * WEEKS_PER_YEAR
@@ -121,7 +126,7 @@ def history_weeks(prices: pd.DataFrame) -> pd.Series:
 
 
 def risk_adjusted_performance(performance: float, ex_ante_vol: float) -> float:
-    """Performance divided by ex-ante volatility (the platform's stated definition)."""
+    """Research return/volatility proxy, NOT a certified NextWise scoring equation."""
     return float("nan") if ex_ante_vol <= 0 else float(performance / ex_ante_vol)
 
 
