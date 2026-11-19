@@ -8,6 +8,8 @@ Research project for the virtual Euronext Trading Game. The **current 18 Novembe
 - [**Canonical Decision Log**](governance/DECISION_LOG.md): decisions and follow-ups
 - [**18 November 2026 Committee Memo**](governance/DECISION_2026-11-18.md): risk/return trade-off and HOLD decision
 - [Five-candidate risk and catalyst gate — 19 November](governance/CANDIDATE_SELECTION_2026-11-19.md): Ahold, ING, ASML, Enel and Schneider matched-ticket comparison; no order authorization
+- [Prospective Ahold vs ING valuation — 19 November](governance/VALUATION_AHOLD_ING_2026-11-19.md): FY2027 EPS × P/E scenarios, risks, downside and decision gate
+- [Scenario Python source](../scripts/valuation_scenarios.py) · [explicit assumptions](../data/scenario_assumptions_AHOLD_ING_2026-11-19.json): transparent, offline, no trading
 - [Reproducible candidate gate (Python)](../scripts/candidate_allocation_gate.py): recalculates risk sensitivities from [dated research inputs](../data/candidate_risk_inputs_2026-11-18.json) and [official manual snapshots](../data/nextwise_official_snapshots.csv)
 - [Chronology since October](governance/PROJECT_TIMELINE_2026.md): prior project milestones, distinct from fills
 - [Repository quality audit](governance/REPOSITORY_AUDIT_2026-11-18.md): repairs, CI and open limitations
