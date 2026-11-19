@@ -19,6 +19,12 @@ Research project for the virtual Euronext Trading Game. The **current 18 Novembe
 - [Historical synthetic-simulation report](../reports/backtesting/SIMULATION_RESULTS.md)
 - [Historical portfolio-construction notebooks](../notebooks/README.md)
 
+## Monitoring
+
+- [Daily monitoring runbook](monitoring/DAILY_MONITOR.md): post-close schedule, frozen holdings, EUR/NOK valuation, data-quality aborts, manual NextWise reconciliation.
+- [Official dated screenshot observations](../data/nextwise_official_snapshots.csv): not mixed with estimated daily Yahoo prices.
+- [Daily monitor workflow](../.github/workflows/daily_monitor.yml): GitHub Actions trigger; generated reports appear only after successful external market-data execution.
+
 ## Templates
 - [Investment memo](templates/INVESTMENT_MEMO_TEMPLATE.md)
 - [Decision log template](templates/DECISION_LOG_TEMPLATE.md)
