@@ -19,7 +19,7 @@
 - [Review-only rules](../../data/price_review_levels_2026-11-19.json)
 - [Python price reviewer](../../scripts/watchlist_price_review.py)
 - [Nightly workflow](../../.github/workflows/candidate_price_review.yml)
-- [Reviews](../../reports/watchlist/) (directory exists only after first successful run)
+- Daily review reports will appear at `reports/watchlist/` **only after the first successful run**
 - [21-stock post-close estimated portfolio monitor](../../.github/workflows/daily_monitor.yml)
 
 **Important:** A GitHub watchlist output is merely a report in the repository; no phone/email alert is promised. A failed or stale market-data request produces no false quote. No NextWise login, no orders, no access credentials and no real-money trades.
