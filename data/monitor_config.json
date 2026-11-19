@@ -1,0 +1,8 @@
+{
+  "read_only": true,
+  "snapshot_date": "2026-11-18",
+  "portfolio_file": "data/portfolio_actual_2026-11-18.csv",
+  "anchor_nav_eur": 50164.75,
+  "cash_eur": 9675.76,
+  "research_note": "21 positions from dated NextWise cards; assumed unchanged for daily market-data estimates. No broker synchronization or trade execution."
+}
