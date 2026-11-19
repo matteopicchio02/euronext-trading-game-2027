@@ -1,0 +1,22 @@
+ticker,name,quantity,current_quote,quote_currency,purchase_quote,purchase_currency,market_value_display,market_value_currency,unrealized_pnl_eur,performance_since_purchase_pct,quote_arrow_pct_label,screenshot_filename_timestamp_rome,source
+AI.PA,Air Liquide,12,190.18,EUR,184.64,EUR,2282.16,EUR,66.48,3.00,-0.40,2026-11-19T15:48:59+01:00,NextWise user screenshot
+AIR.PA,Airbus,7,198.80,EUR,209.48,EUR,1391.60,EUR,-74.72,-5.10,-1.14,2026-11-19T15:48:59+01:00,NextWise user screenshot
+CS.PA,AXA,47,45.57,EUR,43.03,EUR,2141.79,EUR,119.38,5.90,-1.17,2026-11-19T15:48:59+01:00,NextWise user screenshot
+CAP.PA,Capgemini,15,116.05,EUR,126.75,EUR,1740.75,EUR,-160.50,-8.44,-3.81,2026-11-19T15:48:59+01:00,NextWise user screenshot
+DSY.PA,Dassault Systèmes,90,22.99,EUR,25.49,EUR,2069.10,EUR,-225.18,-9.81,-5.78,2026-11-19T15:49:15+01:00,NextWise user screenshot
+EDP.LS,EDP,420,4.85,EUR,4.86,EUR,2036.16,EUR,-3.36,-0.16,-1.52,2026-11-19T15:49:15+01:00,NextWise user screenshot
+ENI.MI,ENI,55,24.75,EUR,25.18,EUR,1360.98,EUR,-23.93,-1.73,-0.84,2026-11-19T15:49:15+01:00,NextWise user screenshot
+EQNR.OL,Equinor,49,389.20,NOK,421.80,NOK,19070.80,NOK,-209.39,-10.51,-2.58,2026-11-19T15:49:15+01:00,NextWise user screenshot
+ENX.PA,Euronext,12,165.80,EUR,165.61,EUR,1989.60,EUR,2.30,0.12,-6.64,2026-11-19T15:49:24+01:00,NextWise user screenshot
+RACE.MI,Ferrari,5,372.25,EUR,366.05,EUR,1861.25,EUR,31.00,1.69,2.31,2026-11-19T15:49:24+01:00,NextWise user screenshot
+G.MI,Generali,52,43.66,EUR,42.36,EUR,2270.32,EUR,67.60,3.07,-2.89,2026-11-19T15:49:24+01:00,NextWise user screenshot
+HEIA.AS,Heineken,29,82.76,EUR,79.50,EUR,2400.04,EUR,94.54,4.10,-1.80,2026-11-19T15:49:24+01:00,NextWise user screenshot
+LI.PA,Klépierre,14,37.18,EUR,37.56,EUR,520.52,EUR,-5.32,-1.01,-0.91,2026-11-19T15:49:38+01:00,NextWise user screenshot
+KPN.AS,KPN,462,4.29,EUR,4.28,EUR,1981.98,EUR,4.62,0.23,-2.79,2026-11-19T15:49:38+01:00,NextWise user screenshot
+OR.PA,L'Oréal,5,438.55,EUR,435.60,EUR,2192.75,EUR,14.75,0.68,-1.75,2026-11-19T15:49:38+01:00,NextWise user screenshot
+ML.PA,Michelin,62,31.80,EUR,32.15,EUR,1971.60,EUR,-21.70,-1.09,-1.30,2026-11-19T15:49:38+01:00,NextWise user screenshot
+PRY.MI,Prysmian,18,107.65,EUR,110.25,EUR,1937.70,EUR,-46.80,-2.36,1.27,2026-11-19T15:49:52+01:00,NextWise user screenshot
+SAN.PA,Sanofi,25,83.98,EUR,78.92,EUR,2099.50,EUR,126.50,6.41,-2.98,2026-11-19T15:49:52+01:00,NextWise user screenshot
+SRG.MI,Snam,336,6.00,EUR,6.15,EUR,2015.33,EUR,-50.40,-2.44,-1.12,2026-11-19T15:49:52+01:00,NextWise user screenshot
+TTE.PA,TotalEnergies,26,79.64,EUR,84.99,EUR,2070.64,EUR,-139.10,-6.29,-6.78,2026-11-19T15:49:52+01:00,NextWise user screenshot
+UCB.BR,UCB,7,283.00,EUR,278.40,EUR,1981.00,EUR,32.20,1.65,-4.55,2026-11-19T15:50:05+01:00,NextWise user screenshot
