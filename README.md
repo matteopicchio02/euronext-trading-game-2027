@@ -65,6 +65,16 @@ The CSV is **not committed**. See [Research methodology](docs/methodology/RESEAR
 
 Other tools: `scripts/weekly_report.py` requires `--portfolio` and `--prices`; it computes a hypothetical constant-weight historical path, **not actual account P&L**. Market-data downloads additionally require `pip install -e ".[data]"`.
 
+## Daily estimated portfolio monitor (NEW)
+
+A [GitHub Actions workflow](.github/workflows/daily_monitor.yml) is scheduled on **Monday–Friday, 20:37 UTC** (21:37/22:37 Rome depending on daylight saving), **subject to GitHub schedule availability**. It downloads daily Yahoo prices for the **dated 21-holding snapshot**, calculates a **conditional mark-to-market NAV and historical risk estimate** (including EUR/NOK for Equinor), then archives dated research reports under `reports/daily/`. No NextWise account access, broker API or orders.
+
+The reported values assume **unchanged holdings and EUR 9,675.76 cash since 18 Nov 2026**. They are *not* official NextWise NAV or actual returns. A new transaction requires a verified replacement snapshot and a manual update to `data/monitor_config.json`. The monitor stops if required quotes are missing or stale.
+
+**[Full monitoring guide](docs/monitoring/DAILY_MONITOR.md)** · [Automation run history](https://github.com/matteopicchio02/euronext-trading-game-2027/actions/workflows/daily_monitor.yml) · [Official screenshot observations](data/nextwise_official_snapshots.csv).
+
+The first daily report will appear **only after the first successful post-close run**; successful CI unit tests alone do not prove external Yahoo data retrieval works.
+
 ## Decision governance
 
 - The Euronext-published six criteria are gross performance, risk-adjusted performance, HHI, sector coverage, diversification ratio and UCITS compliance. **Official weights and implementation details have not been verified**.
