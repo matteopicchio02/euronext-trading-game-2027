@@ -112,8 +112,7 @@ def markdown(results: list[dict], config: dict, snapshot: dict) -> str:
         )
     lines += ["",
         "## Three mutually exclusive illustrative exit-price cases", "",
-        "| Company | Case | EPS factor vs FY27 consensus | Exit P/E | Implied 9 Apr price |",
-        " Gross price return | P&L on illustrative shares | Impact on total Game NAV (pp) |",
+        "| Company | Case | EPS factor vs FY27 consensus | Exit P/E | Implied 9 Apr price | Gross price return | P&L on illustrative shares | Impact on total Game NAV (pp) |",
         "|---|---|---:|---:|---:|---:|---:|---:|"]
     for x in results:
         for key in ("bear","base","bull"):
