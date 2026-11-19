@@ -1,0 +1,64 @@
+{
+  "as_of": "2026-11-19",
+  "game_end": "2027-04-09",
+  "source_note": "FY2027 EPS consensus from MarketScreener 2026-11-19-indexed search pages; indicative intraday price snapshots (FT AD 12:18 GMT, Investing ING on 19 Nov). Scenario EPS multipliers, exit P/E and scenario weights are ANALYST-CHOSEN HYPOTHESES, not consensus targets, statistics or a forecast.",
+  "source_urls": {
+    "ahold_eps": "https://www.marketscreener.com/quote/stock/AHOLD-DELHAIZE-N-V-29752127/valuation/",
+    "ahold_quote": "https://markets.ft.markitdigital.com/data/equities/tearsheet/historical?s=AD%3AAEX",
+    "ahold_company": "https://newsroom.aholddelhaize.com/ahold-delhaize-reports-resilient-q3-2026-results-and-updates-2026-guidance-to-reflect-business-disruption-caused-by-recent-cybersecurity-incident",
+    "ing_eps": "https://www.marketscreener.com/quote/stock/ING-GROEP-N-V-56358303/valuation/",
+    "ing_quote": "https://www.investing.com/equities/ing-groep",
+    "ing_company": "https://ing.com/news/press-releases/3q2026-ing-press-release.html"
+  },
+  "scenario_weights_are_calibrated": false,
+  "probabilities_for_illustration_only": {
+    "bear": 0.25,
+    "base": 0.5,
+    "bull": 0.25
+  },
+  "hypothetical_unmodified_portfolio_return_to_game_end": 0.06,
+  "candidates": [
+    {
+      "ticker": "AD.AS",
+      "name": "Ahold Delhaize",
+      "quote_eur": 34.36,
+      "fy2027_consensus_eps_eur": 2.879,
+      "illustrative_shares": 29,
+      "scenarios": {
+        "bear": {
+          "eps_multiplier": 0.92,
+          "exit_pe": 10.8
+        },
+        "base": {
+          "eps_multiplier": 1,
+          "exit_pe": 12.5
+        },
+        "bull": {
+          "eps_multiplier": 1.06,
+          "exit_pe": 13.5
+        }
+      }
+    },
+    {
+      "ticker": "INGA.AS",
+      "name": "ING Groep",
+      "quote_eur": 28.68,
+      "fy2027_consensus_eps_eur": 2.947,
+      "illustrative_shares": 20,
+      "scenarios": {
+        "bear": {
+          "eps_multiplier": 0.88,
+          "exit_pe": 8.5
+        },
+        "base": {
+          "eps_multiplier": 1,
+          "exit_pe": 10.25
+        },
+        "bull": {
+          "eps_multiplier": 1.08,
+          "exit_pe": 11.75
+        }
+      }
+    }
+  ]
+}
