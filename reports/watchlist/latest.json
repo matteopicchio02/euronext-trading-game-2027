@@ -1,0 +1,27 @@
+{
+  "quote_date": "2026-11-19",
+  "generated_rome": "2026-11-19T22:36:28+01:00",
+  "source": "Third-party Yahoo Finance raw daily closing data (may be delayed), NOT NextWise",
+  "execution": "NO ORDERS; read-only research",
+  "note": "Price threshold is an analyst review trigger, not an order instruction",
+  "entries": [
+    {
+      "ticker": "AD.AS",
+      "name": "Ahold Delhaize",
+      "close_eur": 34.299999,
+      "review_below_eur": 33.0,
+      "distance_pct": 3.9394,
+      "status": "WAIT",
+      "reason": "Rerun EPS/multiple valuation after cyber guidance revisions; not an automatic buy or limit order"
+    },
+    {
+      "ticker": "INGA.AS",
+      "name": "ING Group",
+      "close_eur": 28.200001,
+      "review_below_eur": 27.0,
+      "distance_pct": 4.4444,
+      "status": "WAIT",
+      "reason": "Recheck FY2027 earnings, capital and credit cost estimates before any order; not an automatic buy or limit order"
+    }
+  ]
+}
