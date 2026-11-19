@@ -108,6 +108,8 @@ def evaluate_candidates(
             "hypothetical_return_hurdle_pct": hurdle*100,
             "post_trade_cash_pct": (cash-ticket_eur)/nav*100,
             "ticket_eur": ticket_eur,
+            "risk_budget_pp": risk_budget_pp,
+            "hypothetical_base_return_pct": hypothetical_base_return_pct,
         })
     return sorted(rows, key=lambda x: x["post_trade_vol_pct"])
 
@@ -132,7 +134,7 @@ def markdown_table(items: list[dict], snapshot: dict, historical: dict) -> str:
         f"base annualized volatility: {items[0]['base_vol_pct']:.4f}%.",
         "",
         "| Candidate | 3m momentum | 6m momentum | Vol after | Δ vol (pp) | DR after | "
-        "Max ticket with +0.15pp* | Scenario required gain** |",
+        f"Max ticket with +{items[0]['risk_budget_pp']:.2f}pp* | Scenario required gain** |",
         "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for x in items:
@@ -145,9 +147,9 @@ def markdown_table(items: list[dict], snapshot: dict, historical: dict) -> str:
         )
     lines += [
         "",
-        "*0.15 volatility percentage points is an internal, illustrative research budget; "
+        f"*{items[0]['risk_budget_pp']:.2f} volatility percentage points is an internal, illustrative research budget; "
         "actual share rounding and FX can alter it.",
-        "**The required gain assumes, hypothetically, a +6% return for the unmodified portfolio "
+        f"**The required gain assumes, hypothetically, a +{items[0]['hypothetical_base_return_pct']:.2f}% return for the unmodified portfolio "
         "through April 9, 2027 and asks what new-stock return would keep a simple return/volatility "
         "ratio unchanged. It is NOT a forecast or a fair-value price target.",
         "",
