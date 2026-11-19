@@ -1,0 +1,67 @@
+name: Daily Portfolio Monitor (indicative, no orders)
+
+on:
+  schedule:
+    # Weekdays, 20:37 UTC = 21:37 CET / 22:37 CEST (after Europe closes).
+    # GitHub scheduled triggers can be delayed or missed; not a real-time service.
+    - cron: "37 20 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write  # limited to committing this workflow's calculated reports
+
+concurrency:
+  group: project-alpha-daily-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    name: Estimate virtual holdings and risk
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout private repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install local research package with data dependency
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[data]"
+
+      - name: Estimate holdings using Yahoo daily closes and historical EUR risk
+        run: |
+          python scripts/daily_portfolio_monitor.py
+        # A missing, stale, mismatched or anomalous market price FAILS the job.
+        # No fake report is committed on a failed run.
+
+      - name: Upload model output for inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: alpha-monitor-${{ github.run_id }}
+          path: |
+            reports/daily/*.md
+            reports/daily/*.csv
+            reports/daily/*.json
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Commit only estimated daily model reports
+        shell: bash
+        run: |
+          git config user.name "project-alpha-monitor[bot]"
+          git config user.email "project-alpha-monitor[bot]@users.noreply.github.com"
+          git add -- reports/daily/
+          if git diff --cached --quiet; then
+            echo "No changed report; nothing to commit."
+          else
+            git commit -m "report: indicative market close portfolio monitor"
+            git push origin HEAD:main
+          fi
