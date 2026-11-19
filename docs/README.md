@@ -10,6 +10,7 @@ Research project for the virtual Euronext Trading Game. The **current 18 Novembe
 - [Five-candidate risk and catalyst gate — 19 November](governance/CANDIDATE_SELECTION_2026-11-19.md): Ahold, ING, ASML, Enel and Schneider matched-ticket comparison; no order authorization
 - [Prospective Ahold vs ING valuation — 19 November](governance/VALUATION_AHOLD_ING_2026-11-19.md): FY2027 EPS × P/E scenarios, risks, downside and decision gate
 - [19 November trading desk plan](governance/TRADING_PLAN_2026-11-19.md): conditional price review levels and reasons for no trade
+- [All 21 NextWise positions — 19 November 15:50](governance/PORTFOLIO_DIAGNOSTIC_2026-11-19_1550.md): position P&L, 18-to-19 Nov changes, currency and daily-label data issues; [original card values](../data/portfolio_cards_2026-11-19_1550.csv)
 - [Post-close Ahold/ING price review](../.github/workflows/candidate_price_review.yml): checks prices and publishes research-only statuses, **never orders**
 - [Scenario Python source](../scripts/valuation_scenarios.py) · [explicit assumptions](../data/scenario_assumptions_AHOLD_ING_2026-11-19.json): transparent, offline, no trading
 - [Reproducible candidate gate (Python)](../scripts/candidate_allocation_gate.py): recalculates risk sensitivities from [dated research inputs](../data/candidate_risk_inputs_2026-11-18.json) and [official manual snapshots](../data/nextwise_official_snapshots.csv)
