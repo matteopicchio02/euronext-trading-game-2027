@@ -1,0 +1,22 @@
+{
+  "as_of": "2026-11-19",
+  "currency": "EUR",
+  "read_only": true,
+  "review_not_order": true,
+  "market_data_provider": "Yahoo Finance public daily close (delayed)",
+  "rules": [
+    {
+      "ticker": "AD.AS",
+      "name": "Ahold Delhaize",
+      "review_at_or_below_eur": 33,
+      "reason": "Rerun EPS/multiple valuation after cyber guidance revisions; not an automatic buy or limit order"
+    },
+    {
+      "ticker": "INGA.AS",
+      "name": "ING Group",
+      "review_at_or_below_eur": 27,
+      "reason": "Recheck FY2027 earnings, capital and credit cost estimates before any order; not an automatic buy or limit order"
+    }
+  ],
+  "note": "A threshold breach triggers research review only. Do not trade automatically. Quote is not NextWise executable price."
+}
