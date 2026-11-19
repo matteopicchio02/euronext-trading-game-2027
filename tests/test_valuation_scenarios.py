@@ -10,9 +10,19 @@ ASSUMPTIONS=json.loads((ROOT/"data/scenario_assumptions_AHOLD_ING_2026-11-19.jso
 RISK=json.loads((ROOT/"data/candidate_risk_inputs_2026-11-18.json").read_text(encoding="utf-8"))
 HOLDINGS=read_csv(ROOT/"data/portfolio_actual_2026-11-18.csv")
 
+# The expected risk figures correspond to this explicit, immutable source anchor.
+# The live research CLI reads the most recent fully specified NextWise screenshot.
+FROZEN_19_NOV_SNAPSHOT = {
+    "observed_at_rome": "2026-11-19T14:03:09+01:00",
+    "nav_eur": 49875.21,
+    "equities_eur": 40199.45,
+    "cash_eur": 9675.76,
+}
+
+
 
 def test_reproduce_expected_scenarios():
-    snap=last_complete_snapshot()
+    snap=FROZEN_19_NOV_SNAPSHOT
     results=build_scenarios(ASSUMPTIONS,RISK,HOLDINGS,snap)
     assert {x["ticker"] for x in results}=={"AD.AS","INGA.AS"}
     by={x["ticker"]:x for x in results}
