@@ -58,3 +58,12 @@ Public quote: https://nl.marketscreener.com/koers/aandeel/AHOLD-DELHAIZE-N-V-297
 **Decision log:** proposal only.
 
 This memo is educational, for a **virtual** Euronext Trading Game account, not financial advice or real-money execution.
+
+## Participant-reported follow-up — 20 November 2026
+
+**Participant statement:** "Ho acquistato grande!" after receiving the Ahold Delhaize trade proposal. Treat this as a **user-reported purchase**, not verified execution details and not an order sent by ChatGPT.
+
+**Verification still required:** NextWise execution/transaction screenshot showing ticker/ISIN, actual number of shares, executed price, order type, time, order status and available cash. The original 25-share / EUR 34.30 **limit was a proposal only**; it must **not** be copied to the portfolio as a fact until confirmed. No post-trade NAV, positions or cash have been invented or overwritten.
+
+**Next action:** reconcile actual fill and then generate a new dated 22-position snapshot (if filled and no other changes), including updated position weights, portfolio risk, turnover and investment review.
+
