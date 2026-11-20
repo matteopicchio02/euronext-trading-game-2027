@@ -80,3 +80,11 @@ The participant has subsequently clarified: **"È ancora pendente"**. This super
 ## NextWise order-ticket confirmation (participant report)
 
 Participant confirms that the pending NextWise ticket matches **25 shares at EUR 34.30 limit**, but **no expiry date or validity field is displayed** in the interface. The [NextWise rules](https://www.nextwise.fr/le-reglement) state that an unexecuted order remains pending until execution or cancellation by an authorized person. Therefore, **do not assume automatic Friday expiry**; check the status again after the session and on Monday if still pending. Status remains **PENDING / no confirmed fill**. Do not reflect the order as 22 executed holdings or deduct its full nominal EUR 857.50 from portfolio cash; available buying power may be reserved by NextWise. Check pending order status after the close and on Monday; do not enter a duplicate or chase with a higher limit. Cancellation is a participant decision within NextWise.
+
+## Final order status — user-confirmed EXECUTED (20 Nov, 18:05 CET)
+
+The participant explicitly reports **both previously pending buy orders EXECUTED** at 18:05 on 20 November 2026. Ahold Delhaize AD.AS is now recorded as a **held position, 25 shares based on the user-reported original ticket**; **not pending**. The *actual purchase price per share is not supplied*: the EUR **34.30** price belongs to the original maximum BUY limit and must **not** be treated as a booked fill. The participant also confirms the Unilever 20-share order executed.
+
+NextWise account cash falls from EUR 10,358.26 at 13:55 to EUR 8,336.86 at 18:05, a combined **EUR 2,021.40** outflow for these two purchases, assuming no unrelated cash movements. This is **EUR 4.10 below** the EUR 2,025.50 combined original limits. Individual stock execution prices cannot be inferred from the total. Current account NAV **EUR 49,322.18**, equities **EUR 40,985.32**, cash **EUR 8,336.86** (observed NextWise). Portfolio now contains **23 equities on an order-ticket quantity basis**. Obtain individual execution receipts and marks when possible.
+
+Earlier paragraphs describing this order as PENDING represent **historical interim status**, superseded by this addendum. Do not create a duplicate Ahold buy. [Post-fill reconciliation](../../reports/snapshots/EXECUTED_BUYS_2026-11-20_1805.md).
