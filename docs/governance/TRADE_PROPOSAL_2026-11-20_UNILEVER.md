@@ -77,3 +77,11 @@ The **Ahold Delhaize 25-share order at EUR 34.30 is independently pending**, and
 If both limits were eventually fully filled without fees or other changes, combined purchase cost would be **EUR 2,025.50**, leaving a hypothetical **EUR 8,332.76** cash; these are NOT executed trades. Avoid duplicate buy orders or chasing either limit.
 
 **Next update trigger:** actual status changes to Executed/Partially Executed/Cancelled, with confirmed quantity, price and new NextWise summary. Record those before any further trade recommendation.
+
+## Final order status — user-confirmed EXECUTED (20 Nov, 18:05 CET)
+
+The participant explicitly confirms **both Ahold Delhaize and Unilever buy orders EXECUTED** on 20 November 2026 after the previous "pendente" report. Unilever UNA.AS is therefore now a **held position, 20 shares based on the original order ticket**. The reported EUR **1,168.00** was the original **20 × EUR 58.40 maximum limit commitment**, **not** a separately verified actual fill cost or execution price.
+
+NextWise cash decreased from EUR 10,358.26 to EUR 8,336.86, an aggregate EUR **2,021.40** after both purchases; combined maximum limit consideration was EUR 2,025.50. EUR **4.10** was saved against the limits in aggregate, assuming no intervening unrelated cash movements. We cannot allocate that saving between Ahold and Unilever. Observed account NAV at 18:05 EUR **49,322.18**, equities EUR **40,985.32**, cash EUR **8,336.86**. Updated **23-position** quantity inventory is [here](../../data/positions_after_buys_2026-11-20.csv).
+
+The earlier PENDING paragraphs were interim status and are now **superseded**. Do not submit duplicate Unilever orders. Obtain each buy's fill price and any fees from NextWise `Transazioni` for the definitive execution ledger. [Consolidated post-fill report](../../reports/snapshots/EXECUTED_BUYS_2026-11-20_1805.md).
