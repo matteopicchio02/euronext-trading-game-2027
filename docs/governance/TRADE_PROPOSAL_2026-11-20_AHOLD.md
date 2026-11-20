@@ -67,3 +67,12 @@ This memo is educational, for a **virtual** Euronext Trading Game account, not f
 
 **Next action:** reconcile actual fill and then generate a new dated 22-position snapshot (if filled and no other changes), including updated position weights, portfolio risk, turnover and investment review.
 
+## Latest status correction — participant reports PENDING order
+
+The participant has subsequently clarified: **"È ancora pendente"**. This supersedes the ambiguous earlier report of an "acquisto": an order has been **submitted on NextWise by the participant and remains PENDING**. **No fill has been confirmed**. ChatGPT did not place the order.
+
+- The 25-share quantity and EUR 34.30 limit are the **proposed terms**, not independently confirmed submitted terms. Request the NextWise order ticket (ticker, submitted share count, submitted limit, validity and status).
+- **Do not** add Ahold to the actual portfolio snapshot, advance the holding count to 22, assume trading cash was spent, or claim any Ahold realized/unrealized P&L until an actual full/partial execution is verified.
+- If NextWise reserves buying power against a pending order, distinguish **available cash** from **account cash**, and do not enter a duplicate buy.
+- Before the weekend verify whether the order expires at Friday's close or remains valid for future sessions. Do not raise a proposed limit merely to force an execution.
+- On confirmation of an actual partial/full execution or cancellation, log date, filled quantity, average execution price, fees if applicable, new cash/NAV and a new dated position snapshot.
