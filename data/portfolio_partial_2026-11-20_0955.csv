@@ -1,0 +1,22 @@
+date,time_local,ticker,name,sector,quantity,quoted_price_local,market_value_display,market_value_currency,market_value_eur,pnl_eur,previous_18nov_market_value_eur,previous_18nov_pnl_eur,delta_18_to_20_pnl_eur,delta_18_to_20_market_value_eur,observation_status
+2026-11-20,09:54-09:55,AI.PA,Air Liquide,Basic Materials,,,,EUR,,,2276.88,61.20,,,missing screenshot
+2026-11-20,09:54-09:55,AIR.PA,Airbus,Industrials,7,194.04,1358.28,EUR,1358.28,-108.05,1384.46,-81.87,-26.18,-26.18,observed
+2026-11-20,09:54-09:55,CS.PA,AXA,Financials,47,45.25,2126.75,EUR,2126.75,104.34,2148.84,126.43,-22.09,-22.09,observed
+2026-11-20,09:54-09:55,CAP.PA,Capgemini,Technology,15,116.20,1743.00,EUR,1743.00,-158.25,1788.75,-112.50,-45.75,-45.75,observed
+2026-11-20,09:54-09:55,DSY.PA,Dassault Systèmes,Technology,90,22.77,2049.30,EUR,2049.30,-244.98,2110.50,-183.78,-61.20,-61.20,observed
+2026-11-20,09:54-09:55,EDP.LS,EDP,Utilities,420,4.86,2040.78,EUR,2040.78,1.26,2067.66,28.14,-26.88,-26.88,observed
+2026-11-20,09:54-09:55,ENI.MI,Eni,Energy,55,24.49,1346.68,EUR,1346.68,-38.23,1372.53,-12.38,-25.85,-25.85,observed
+2026-11-20,09:54-09:55,EQNR.OL,Equinor,Energy,49,385.90,18909.10,NOK,,-231.17,1811.57,-181.46,-49.71,,"observed; capital displayed in NOK, P&L in EUR"
+2026-11-20,09:54-09:55,ENX.PA,Euronext,Financials,12,164.40,1972.80,EUR,1972.80,-14.50,1987.20,-0.10,-14.40,-14.40,observed; displayed -7.43% quote change requires verification
+2026-11-20,09:54-09:55,RACE.MI,Ferrari,Consumer Discretionary,5,368.80,1844.00,EUR,1844.00,13.75,1873.25,43.00,-29.25,-29.25,observed
+2026-11-20,09:54-09:55,G.MI,Generali,Financials,52,43.28,2250.56,EUR,2250.56,47.84,2264.08,61.36,-13.52,-13.52,observed
+2026-11-20,09:54-09:55,HEIA.AS,Heineken,Consumer Staples,29,82.96,2405.84,EUR,2405.84,100.34,2440.64,135.14,-34.80,-34.80,observed
+2026-11-20,09:54-09:55,LI.PA,Klépierre,Real Estate,14,37.28,521.92,EUR,521.92,-3.92,525.28,-0.56,-3.36,-3.36,observed
+2026-11-20,09:54-09:55,KPN.AS,KPN,Telecommunications,462,4.34,2006.93,EUR,2006.93,29.57,2016.17,38.81,-9.24,-9.24,observed
+2026-11-20,09:54-09:55,OR.PA,L’Oréal,Consumer Staples,5,438.85,2194.25,EUR,2194.25,16.25,2215.25,37.25,-21.00,-21.00,observed
+2026-11-20,09:54-09:55,ML.PA,Michelin,Consumer Discretionary,62,31.35,1943.70,EUR,1943.70,-49.60,1997.64,4.34,-53.94,-53.94,observed
+2026-11-20,09:54-09:55,PRY.MI,Prysmian,Industrials,18,103.20,1857.60,EUR,1857.60,-126.90,1943.10,-41.40,-85.50,-85.50,observed
+2026-11-20,09:54-09:55,SAN.PA,Sanofi,Health Care,25,84.35,2108.75,EUR,2108.75,135.75,2156.25,183.25,-47.50,-47.50,observed
+2026-11-20,09:54-09:55,SRG.MI,Snam,Utilities,336,6.02,2021.38,EUR,2021.38,-44.35,2038.18,-27.55,-16.80,-16.80,observed
+2026-11-20,09:54-09:55,TTE.PA,TotalEnergies,Energy,26,78.64,2044.64,EUR,2044.64,-165.10,2075.06,-134.68,-30.42,-30.42,observed
+2026-11-20,09:54-09:55,UCB.BR,UCB,Health Care,7,282.30,1976.10,EUR,1976.10,27.30,1995.70,46.90,-19.60,-19.60,observed
