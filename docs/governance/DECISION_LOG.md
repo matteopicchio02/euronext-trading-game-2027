@@ -10,6 +10,8 @@ This is the chronological record of portfolio decisions for the Euronext Trading
 
 | 2026-11-20 | Ahold limit research proposal | **PROPOSED — 25 AD shares at maximum EUR 34.30; not automatically authorized** | **NOT SENT / NO FILL** | 49,519.84 | Small <=EUR 857.50 cash-funded diversification tranche; lower historical marginal risk among five candidates; cybersecurity guidance and pricing remain material risks; do not chase or convert to market order. No past HOLD retroactively reclassified. | [Ahold dated pre-trade memo](./TRADE_PROPOSAL_2026-11-20_AHOLD.md) | User checks ticker/ISIN, current NextWise quote, order validity; confirms executed quantity/price only after actual fill |
 
+| 2026-11-20 | Ahold Delhaize (AD.AS) reported purchase | **USER REPORTS PURCHASE** — execution details pending | **User-reported purchase; not independently confirmed in NextWise; no order placed by ChatGPT** | 49,519.84 (pre-trade snapshot) | Participant explicitly reports buying following the 25-share, max EUR 34.30 limit proposal. Exact quantity, executed price, order type, fill time, new cash and actual portfolio weight have NOT been verified; do not assume the proposal equals the fill. | [Original proposal and execution follow-up](./TRADE_PROPOSAL_2026-11-20_AHOLD.md) | Obtain NextWise order-status/transaction screenshot; record real quantity, fill price and current cash, then update portfolio and risk calculations |
+
 
 ## 2026-11-18 snapshot and model state
 - 21 equity holdings: EUR 40,488.99; cash: EUR 9,675.76 (19.29%); total NAV: EUR 50,164.75.
