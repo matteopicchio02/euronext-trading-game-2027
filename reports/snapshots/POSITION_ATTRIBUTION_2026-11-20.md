@@ -1,3 +1,5 @@
+> **SUPERSEDED:** This is the intermediate 20-of-21 analysis. Air Liquide and cash were subsequently confirmed; read [the completed 21-of-21 report](POSITION_ATTRIBUTION_2026-11-20_COMPLETE.md). The preliminary unexplained EUR 7.92 is fully reconciled there.
+
 # Project Alpha 2027 — Partial 20 November 2026 Position Attribution
 **NextWise individual-account screenshots:** 20 November 2026, device clock 09:54–09:55 Europe/Rome.  
 **Record type:** transcribed **20 of 21** equity cards. **Not a market-close or live broker feed. Not an executed order instruction.**
