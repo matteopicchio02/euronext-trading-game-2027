@@ -76,3 +76,7 @@ The participant has subsequently clarified: **"È ancora pendente"**. This super
 - If NextWise reserves buying power against a pending order, distinguish **available cash** from **account cash**, and do not enter a duplicate buy.
 - Before the weekend verify whether the order expires at Friday's close or remains valid for future sessions. Do not raise a proposed limit merely to force an execution.
 - On confirmation of an actual partial/full execution or cancellation, log date, filled quantity, average execution price, fees if applicable, new cash/NAV and a new dated position snapshot.
+
+## NextWise order-ticket confirmation (participant report)
+
+Participant confirms that the pending NextWise ticket matches the proposed **25 shares at EUR 34.30 limit** and displays an **expiry field**. The exact expiry **date/value was not transcribed**, so do not assume DAY or GTC. Status remains **PENDING / no confirmed fill**. Do not reflect the order as 22 executed holdings or deduct its full nominal EUR 857.50 from portfolio cash; available buying power may be reserved by NextWise. The participant should check expiry before the close and confirm whether it stays active after the session; no duplicate or chased market order.
