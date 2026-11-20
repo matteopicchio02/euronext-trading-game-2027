@@ -1,5 +1,7 @@
 # Project Alpha 2027 — Indicative portfolio monitor (2026-11-19)
 
+> **ARCHIVED / NOT CURRENT AFTER TRADE:** On 20 November 2026 the participant confirmed selling 30 DSY.PA shares at EUR 22.68. The estimates below assume the original 90 DSY shares and are only a historical 19 November model output. The daily NAV workflow is on reconciliation hold until an up-to-date after-trade NextWise snapshot is supplied. [Trade-state report](../snapshots/EXECUTION_2026-11-20_DSY_AHOLD.md).
+
 > **NOT a NextWise statement or live NAV.** Estimate assumes holdings and cash
 > **unchanged since 2026-11-18**. No platform login, API or orders.
 > Yahoo historical adjusted prices/FX may differ from NextWise. Corporate actions,
