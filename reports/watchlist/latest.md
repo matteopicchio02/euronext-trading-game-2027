@@ -1,5 +1,7 @@
 # Project Alpha — Candidate review levels (2026-11-19)
 
+> **HISTORICAL 19-NOV REPORT — NOT CURRENT PORTFOLIO STATUS.** The participant confirmed an Ahold Delhaize BUY fill on 20 Nov. AD.AS is now a held position (25 shares from the reported order ticket), **not** a new buy candidate. See [20-Nov execution record](../snapshots/EXECUTED_BUYS_2026-11-20_1805.md). The next scheduled review uses the updated held-position rule.
+
 > **NO TRADES. NOT OFFICIAL NEXTWISE QUOTES OR AUTO-ORDER SIGNALS.**
 > A breached price level invites human review of EPS, valuation,
 > corporate news, risk and the account's actual available order price.
