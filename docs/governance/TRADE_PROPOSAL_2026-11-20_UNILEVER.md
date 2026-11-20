@@ -67,3 +67,13 @@ As of a publicly timestamped 20 Nov **13:19** report, **UNA.AS last around EUR 5
 **Conditional scenario only if 20 shares fully executed for EUR 1,168.00 in total, with zero fees and no other movements:** cash **EUR 9,190.26**, equity value increases EUR 1,168.00 before subsequent price marks, and position count becomes 22. Ahold Delhaize 25 @ EUR 34.30 buy was last confirmed **PENDING**, so do not include it or submit a duplicate.
 
 **Next action:** confirm whether NextWise shows `Eseguito` or `Pendente` for Unilever, obtain filled quantity/cash or screenshot, and then update the actual positions/transaction ledger. The pre-trade proposal terms above are historical; this addendum is the more recent order-status information.
+
+## Final reported status: PENDING / no confirmed fill
+
+The participant explicitly clarifies **"pendente"** in response to whether the EUR 1,168 Unilever order is executed or pending. **Status is therefore PENDING on NextWise, NOT EXECUTED**. The EUR 1,168 figure was the reported order notional; 20 shares at a EUR 58.40 maximum limit are the planned terms, not a verified receipt. **No Unilever shares should be added to actual holdings and no EUR 1,168 should be deducted from the official cash balance** until an execution is explicitly confirmed.
+
+The **Ahold Delhaize 25-share order at EUR 34.30 is independently pending**, and the **Dassault Systèmes 30-share sale at EUR 22.75 is executed**. The last observed NextWise overview remains EUR **49,316.53 NAV** and EUR **10,358.26 cash** as of 20 Nov 13:55, **not** a refreshed value after the new pending order. If the platform reserves order buying power, this may reduce *available* buying power without reducing displayed *account cash*.
+
+If both limits were eventually fully filled without fees or other changes, combined purchase cost would be **EUR 2,025.50**, leaving a hypothetical **EUR 8,332.76** cash; these are NOT executed trades. Avoid duplicate buy orders or chasing either limit.
+
+**Next update trigger:** actual status changes to Executed/Partially Executed/Cancelled, with confirmed quantity, price and new NextWise summary. Record those before any further trade recommendation.
