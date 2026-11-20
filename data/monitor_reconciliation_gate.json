@@ -1,0 +1,10 @@
+{
+  "paused": true,
+  "as_of": "2026-11-20",
+  "reason": "DSY.PA 30-share sell at EUR 22.68 executed per participant after the 20-Nov morning NextWise snapshot; existing 18-Nov monitor anchor and quantities are no longer current.",
+  "existing_monitor_anchor": "2026-11-18",
+  "report_state": "Older reports remain historical estimates and must not be represented as current post-trade portfolio values.",
+  "resume_condition": "Obtain a synchronized, reconciled post-execution NextWise full 21-position and cash NAV snapshot, with Ahold pending/fill status, update monitor_config.json and tests, then set paused=false.",
+  "pending_order": "AD.AS buy 25 shares at limit EUR 34.30, user reports pending; not a position",
+  "read_only": true
+}
