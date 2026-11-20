@@ -83,20 +83,29 @@ def review_prices(
         pending = rule.get("pending_order_user_reported", False)
         if not isinstance(pending, bool):
             raise ValueError("pending_order_user_reported must be a boolean")
+        held = rule.get("held_in_portfolio_reported", False)
+        if not isinstance(held, bool):
+            raise ValueError("held_in_portfolio_reported must be a boolean")
+        if pending and held:
+            raise ValueError("Position cannot simultaneously be held and a pending new-entry order")
         if pending:
             if not isinstance(rule.get("reported_pending_quantity"), int) or rule["reported_pending_quantity"] <= 0:
                 raise ValueError("Pending order requires a positive reported quantity")
             limit = float(rule.get("reported_pending_limit_eur", 0))
             if not np.isfinite(limit) or limit <= 0:
                 raise ValueError("Pending order requires a valid reported limit")
+        if held and (not isinstance(rule.get("reported_held_quantity"), int) or rule["reported_held_quantity"] <= 0):
+            raise ValueError("Held position must have a positive reported quantity")
         rows.append({
             "ticker": ticker,
             "name": rule["name"],
             "close_eur": round(close, 6),
             "review_below_eur": threshold,
             "distance_pct": round((close/threshold - 1.0)*100.0, 4),
-            "status": ("PENDING_ORDER_VERIFY_WITH_NEXTWISE" if pending
-                       else ("REVIEW_FUNDAMENTALS" if close <= threshold else "WAIT")),
+            "status": ("HELD_POSITION_MONITOR" if held else
+                       "PENDING_ORDER_VERIFY_WITH_NEXTWISE" if pending else
+                       "REVIEW_FUNDAMENTALS" if close <= threshold else "WAIT"),
+            "reported_held_quantity": rule.get("reported_held_quantity") if held else None,
             "reported_pending_quantity": rule.get("reported_pending_quantity") if pending else None,
             "reported_pending_limit_eur": rule.get("reported_pending_limit_eur") if pending else None,
             "reason": rule["reason"],
@@ -119,6 +128,8 @@ def report_text(result: dict) -> str:
         "> corporate news, risk and the account's actual available order price.",
         "> PENDING_ORDER_VERIFY_WITH_NEXTWISE means a user-reported outstanding order:",
         "> **do not place a duplicate**. This tool cannot check NextWise fills or cancellations.",
+        "> HELD_POSITION_MONITOR means a user-reported existing holding:",
+        "> review position risk and fundamentals, **not a fresh buy entry**.",
         "",
         "| Candidate | Yahoo close EUR | Review at/below EUR | Distance to threshold | Status |",
         "|---|---:|---:|---:|---|",
