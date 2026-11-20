@@ -12,6 +12,8 @@ This is the chronological record of portfolio decisions for the Euronext Trading
 
 | 2026-11-20 | Ahold Delhaize (AD.AS) order submitted by participant | **USER CONFIRMS PENDING ORDER — NO CONFIRMED FILL** | **Pending on NextWise per participant; quantity, entered limit, validity and fill details not independently checked; no order placed by ChatGPT** | 49,519.84 (pre-order snapshot) | Participant first reported a purchase, then clarified that the order is still pending. The proposed ticket was 25 shares at max EUR 34.30, but submitted terms require confirmation. Do not add shares, deduct cash or increase holdings count until execution is verified. | [Pre-trade memo and status updates](./TRADE_PROPOSAL_2026-11-20_AHOLD.md) | Inspect status, entered limit and expiration before weekend; document a genuine partial/full fill or cancellation before updating positions |
 
+| 2026-11-20 | Fundamental review, five drawdown contributors | **HOLD on Prysmian, Michelin, Equinor, Capgemini; DSY REDUCE-WATCH** | **NO ADDITIONAL ORDER SENT / DSY SALE NOT AUTHORIZED** | 49,519.84 (morning snapshot) | Post-Q3 fundamentals remain materially intact for PRY/CAP; EQNR cyberattack stopped without known production impact; DSY 2029 objectives received critical analyst reaction. Conditional 30-share DSY trim is an *illustrative proposal*, ideally paired with confirmed Ahold fill rather than uninvested cash. | [Dated five-name investment review](./REVIEW_2026-11-20_FIVE_NAMES.md) | Confirm Ahold pending/fill status; validate fresh DSY quote and catalyst expectations before any sell |
+
 
 ## 2026-11-18 snapshot and model state
 - 21 equity holdings: EUR 40,488.99; cash: EUR 9,675.76 (19.29%); total NAV: EUR 50,164.75.
