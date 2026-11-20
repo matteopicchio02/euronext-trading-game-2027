@@ -14,6 +14,8 @@ This is the chronological record of portfolio decisions for the Euronext Trading
 
 | 2026-11-20 | Fundamental review, five drawdown contributors | **HOLD on Prysmian, Michelin, Equinor, Capgemini; DSY REDUCE-WATCH** | **NO ADDITIONAL ORDER SENT / DSY SALE NOT AUTHORIZED** | 49,519.84 (morning snapshot) | Post-Q3 fundamentals remain materially intact for PRY/CAP; EQNR cyberattack stopped without known production impact; DSY 2029 objectives received critical analyst reaction. Conditional 30-share DSY trim is an *illustrative proposal*, ideally paired with confirmed Ahold fill rather than uninvested cash. | [Dated five-name investment review](./REVIEW_2026-11-20_FIVE_NAMES.md) | Confirm Ahold pending/fill status; validate fresh DSY quote and catalyst expectations before any sell |
 
+| 2026-11-20 | DSY partial sell order proposal | **PROPOSED — SELL 30 of 90 DSY.PA; limit minimum EUR 22.70** | **NOT SENT / NO FILL CONFIRMED** | 49,519.84 (pre-trade 09:54 snapshot) | Reassess time-to-catalyst mismatch and 2029 CMD analyst concern; reduce one-third position-specific downside risk while keeping majority exposure. Gross EUR 681 if 30 shares fill at price floor, not a booked transaction. Existing Ahold 25 @ EUR 34.30 remains participant-reported pending. | [DSY pre-trade memo](./TRADE_PROPOSAL_2026-11-20_DSY_TRIM.md) | Participant verifies actual NextWise order ticket, limit and fill status; no holdings/cash updates before confirmed fill |
+
 
 ## 2026-11-18 snapshot and model state
 - 21 equity holdings: EUR 40,488.99; cash: EUR 9,675.76 (19.29%); total NAV: EUR 50,164.75.
