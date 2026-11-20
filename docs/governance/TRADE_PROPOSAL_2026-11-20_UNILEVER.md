@@ -57,3 +57,13 @@ As of a publicly timestamped 20 Nov **13:19** report, **UNA.AS last around EUR 5
 - Recheck at a synchronized post-close checkpoint and after new earnings/large price gaps; avoid daily whipsaw trading.
 
 **Current trade booking status at memo publication:** DSY 30-share sale at EUR 22.75 is participant-confirmed executed, Ahold BUY 25 at max EUR 34.30 pending, Unilever **research proposal only**. ChatGPT and GitHub have no NextWise trading access.
+
+## Participant-reported Unilever purchase — status to verify
+
+**20 Nov 2026, after the trade proposal:** participant says "acquistato a un prezzo totale di 1168". The participant-reported **EUR 1,168.00 total** exactly matches our proposed **20 UNA.AS shares × EUR 58.40 maximum share price**. This arithmetic is indicative; the participant has **not yet separately confirmed** order status `Eseguito` rather than `Pendente`, actual executed quantity, share fill price, any fees, or current NextWise cash.
+
+**Bookkeeping control:** treat this as a **user-reported purchase awaiting fill-status confirmation**. Do **not** yet insert UNA.AS into the 21-name executed holdings inventory, subtract EUR 1,168 from official cash, or claim there are 22 actual holdings until NextWise shows execution. The prior dated 13:55 snapshot remains NAV **EUR 49,316.53**, cash **EUR 10,358.26**.
+
+**Conditional scenario only if 20 shares fully executed for EUR 1,168.00 in total, with zero fees and no other movements:** cash **EUR 9,190.26**, equity value increases EUR 1,168.00 before subsequent price marks, and position count becomes 22. Ahold Delhaize 25 @ EUR 34.30 buy was last confirmed **PENDING**, so do not include it or submit a duplicate.
+
+**Next action:** confirm whether NextWise shows `Eseguito` or `Pendente` for Unilever, obtain filled quantity/cash or screenshot, and then update the actual positions/transaction ledger. The pre-trade proposal terms above are historical; this addendum is the more recent order-status information.
