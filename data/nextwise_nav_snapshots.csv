@@ -3,4 +3,4 @@ local_date,local_time,timezone,nav_eur,securities_eur,cash_eur,app_performance_p
 2026-11-19,09:27,Europe/Rome,50104.44,40428.68,9675.76,-0.14,50175.20,User-supplied NextWise portfolio screenshot,no,App display reading
 2026-11-19,11:18,Europe/Rome,49974.30,,,-0.40,,User-supplied NextWise profile screenshot,no,Only NAV and displayed performance visible; other values not observed
 2026-11-19,22:48,Europe/Rome,49698.22,40022.46,9675.76,-0.95,50175.20,User-supplied NextWise portfolio screenshot,no,Evening app reading; quote timing not independently confirmed
-2026-11-20,09:54,Europe/Rome,49519.84,,,-1.31,,User-supplied NextWise profile screenshot,no,Morning app profile reading only; no cash holdings or executed orders shown
+2026-11-20,09:54-09:55,Europe/Rome,49519.84,39844.08,9675.76,-1.31,,User-supplied NextWise profile and 21 holdings screenshots,no,Account cash 9675.76 confirmed in 09:55 portfolio image; securities value inferred by NAV minus cash; complete quantity-matched position snapshot
