@@ -1,19 +1,20 @@
 {
   "paused": true,
   "as_of": "2026-11-20",
-  "reason": "DSY.PA 30-share sell executed at EUR 22.75 per participant correction after the 20-Nov morning NextWise snapshot; old 18-Nov frozen monitor quantities remain stale.",
+  "reason": "User-confirmed DSY.PA 30-share sale at EUR 22.75 changed quantities from the frozen 18-Nov research anchor; latest official NextWise NAV 49,316.53 at 20-Nov 13:55 has only account aggregates. Do not publish model values using old DSY quantity.",
   "existing_monitor_anchor": "2026-11-18",
   "report_state": "Older reports remain historical estimates and must not be represented as current post-trade portfolio values.",
   "resume_condition": "Obtain a synchronized, reconciled post-execution NextWise full 21-position and cash NAV snapshot, with Ahold pending/fill status, update monitor_config.json and tests, then set paused=false.",
-  "pending_order": "AD.AS buy 25 shares at limit EUR 34.30, user reports pending; not a position",
+  "pending_order": "AD.AS buy 25 shares at limit EUR 34.30, user confirms unaccounted for on NextWise 13:55 screenshot; last reported pending. No AD.AS fill in actual positions.",
   "read_only": true,
   "latest_observed_post_sale_summary": {
     "date": "2026-11-20",
-    "clock": "not visible in cropped NextWise screenshot",
-    "nav_eur": 49433.18,
-    "equities_eur": 39074.92,
+    "clock": "13:55 Europe/Rome, from visible screenshot clock",
+    "nav_eur": 49316.53,
+    "equities_eur": 38958.27,
     "cash_eur": 10358.26,
-    "performance_pct": -1.48
+    "performance_pct": -1.71,
+    "provenance": "NextWise user-supplied portfolio overview screenshot, not synchronized stock-by-stock prices"
   },
   "dsy_execution_reconciliation": {
     "shares_reported": 30,
