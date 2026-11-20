@@ -26,17 +26,18 @@ def test_order_events_and_cash_scenario_are_not_confused_with_verified_nav():
     ad = events.loc["AD.AS"]
     assert ds.status == "EXECUTED_USER_CONFIRMED"
     assert ds.quantity == 30
-    assert ds.execution_price_eur == pytest.approx(22.68)
-    assert ds.gross_eur == pytest.approx(680.40)
+    assert ds.execution_price_eur == pytest.approx(22.75)
+    assert ds.gross_eur == pytest.approx(682.50)
     assert ad.status == "PENDING_USER_CONFIRMED"
     assert ad.order_limit_eur == pytest.approx(34.30)
     assert ad.quantity == 25
     assert pd.isna(ad.execution_price_eur)
-    assert 9675.76 + ds.gross_eur == pytest.approx(10356.16)
+    assert 9675.76 + ds.gross_eur == pytest.approx(10358.26)
 
 
 def test_stale_nav_reporting_gate_is_closed():
     gate = json.loads((ROOT / "data/monitor_reconciliation_gate.json").read_text())
     assert gate["paused"] is True
+    assert gate['dsy_execution_reconciliation']['reconciliation_gap_eur'] == pytest.approx(0.0)
     assert gate["read_only"] is True
     assert "2026-11-20" == gate["as_of"]
