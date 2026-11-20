@@ -1,5 +1,5 @@
 # Project Alpha 2027 — Pre-trade proposal: partial trim of Dassault Systèmes
-**Decision date:** 20 November 2026. **Current post-decision status:** user confirms DSY sale **EXECUTED**, EUR 22.68 per share, 30 shares as specified in proposal; receipt and post-fill cash not independently obtained. Ahold order remains **PENDING**. **Virtual ETG portfolio.**
+**Decision date:** 20 November 2026. **Current post-decision status:** user confirms DSY sale **EXECUTED at EUR 22.75**, 30 shares under the agreed proposal; gross EUR 682.50 matches the NextWise cash increase. Earlier EUR 22.68 was explicitly corrected. Ahold buy remains **PENDING**. Broker receipt, order type and fees not independently available. **Virtual ETG portfolio.**
 
 ## Proposed order (participant must verify manually on NextWise)
 
@@ -61,7 +61,9 @@ Assuming **30 shares execute exactly at EUR 22.70** while all other marked posit
 
 **No actual NextWise order placed by ChatGPT. A user action is required.**
 
-## User-reported Dassault sale at EUR 22.68 — execution reconciliation pending
+## Historical first report — EUR 22.68 (SUPERSEDED by the 22.75 confirmation)
+
+> The observations and EUR 2.10 concern documented below were made before the participant corrected the reported fill price. They are retained as an audit trail, **not current accounting**.
 
 **Participant statement:** "ho venduto a 22,68" on 20 November 2026, following the proposed 30-share DSY trim. Treat **EUR 22.68 as user-reported sale price**, but the participant has **not explicitly confirmed quantity, filled vs pending status, execution timestamp, order type or fees** in this message. **Do not mark the proposed 30-share sale as a verified fill or edit actual holdings yet.**
 
@@ -76,10 +78,14 @@ Assuming **30 shares execute exactly at EUR 22.70** while all other marked posit
 
 **Outstanding action:** participant must confirm whether 30 were executed, whether order shows *Eseguito*, exact submitted order type/limit, and updated cash if available. Enter a definitive transaction and create a new dated 21-name actual snapshot only after verification. No NextWise trade was sent by GitHub or ChatGPT.
 
-## Latest update — participant-confirmed EXECUTED DSY, Ahold remains pending
+## Final confirmation — user-corrected EUR 22.75 execution and reconciled cash
 
-On 20 Nov 2026 the participant clarified: **"dassault systems è eseguito l'altro ancora no"**, following the reported DSY sale at **EUR 22.68/share** and 30-share sell instruction. DSY is therefore recorded as a **participant-confirmed EXECUTED 30-share trim**, with **60 DSY shares** remaining under the agreed quantity. Ahold's 25-share EUR 34.30 limit buy remains **PENDING, not a position**.
+On 20 November 2026 the participant clarified that the DSY order was **executed** and the Ahold order **was still pending**, then **explicitly corrected** the reported Dassault Systèmes sale price from EUR **22.68** to **EUR 22.75**. The sale follows the agreed **30-share** ticket, leaving 60 shares under the established position-size assumption. The final price supersedes the earlier report, not the original EUR 22.70 pre-trade sell-limit proposal.
 
-Estimated gross DSY proceeds are **EUR 680.40** and estimated account cash **EUR 10,356.16** before fees/other flows, **not verified platform figures**. The actual DSY order type/limit remains unknown; the proposed sell floor of **EUR 22.70** versus **EUR 22.68** reported execution is recorded as an execution-quality exception (EUR 0.60 on 30 shares). The receipt, time, commission, actual cash and current NAV remain to be confirmed. The earlier `User-reported` appendix was written **before** the participant confirmed execution and is now superseded for fill status.
+**Confirmed and reconciled:** EUR 22.75 × 30 shares = **EUR 682.50 gross**, equal to the cash change shown by NextWise from **EUR 9,675.76** to **EUR 10,358.26**. **Cash discrepancy EUR 0.00.** The corrected execution price is EUR **0.05 above** the proposed sell floor, so the earlier suspected price-limit shortfall is **no longer applicable**.
 
-Authoritative dated report: [DSY executed / AD pending, post-trade reconciliation](../../reports/snapshots/EXECUTION_2026-11-20_DSY_AHOLD.md). Frozen morning 20-Nov positions are intentionally not overwritten.
+The user-uploaded post-trade NextWise summary shows **EUR 49,433.18 NAV**, **EUR 39,074.92 equities** and **EUR 10,358.26 cash**. Indicative realized book loss versus displayed EUR 25.49 acquisition-price basis is **EUR 82.20** for 30 shares, before any adjustments. The receipt, order type, precise time, fees and updated DSY card are still not separately captured.
+
+**Ahold Delhaize remains pending**, with no confirmed fill and no AD.AS position booked. The original morning stock-mark snapshot is preserved; the market-data NAV monitor remains safely on hold until a synchronized post-sale valuation is available.
+
+Authoritative dated records: [Reconciled DSY execution and AD pending](../../reports/snapshots/EXECUTION_2026-11-20_DSY_AHOLD.md) · [Observed post-sale cash/NAV](../../reports/snapshots/NEXTWISE_POST_DSY_SALE_2026-11-20.md).
