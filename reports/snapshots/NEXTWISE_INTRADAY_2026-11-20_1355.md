@@ -12,8 +12,8 @@
 | Valore totale | **EUR 49,316.53** |
 | Performance displayed | **−1.71%** |
 | Securities + cash − NAV | **EUR 0.00** |
-| Equity weight (NAV) | **78.9982%** |
-| Cash weight (NAV) | **21.0018%** |
+| Equity weight (NAV) | **78.9964%** |
+| Cash weight (NAV) | **21.0036%** |
 
 **Be careful with performance bases:** the change relative to the competition's original nominal EUR 50,000 is EUR **−683.47** (**−1.36694%**), which is not the performance displayed by NextWise against its EUR 50,175.20 internal reference.
 
