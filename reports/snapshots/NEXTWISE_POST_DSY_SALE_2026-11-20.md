@@ -42,7 +42,7 @@ Conditional arithmetic:
 - Participant confirms a **DSY.PA sell execution** following 30-share trim proposal. The event-based quantity inventory assumes 30 executed, leaving **60 DSY**; obtain screenshot of updated DSY card to confirm exact quantity.
 - **AD.AS buy 25 @ max EUR 34.30 remains PENDING** per participant's most recent order-status confirmation; do not count it in invested equities or enter a duplicate.
 - Account currently has **21 distinct actual equity holdings** if the reported 30-share DSY partial sale is accurate and there are no other fills.
-- Observed cash fraction **20.9554%** and equity fraction **79.0446%** of current NAV.
+- Observed cash fraction **20.9541%** and equity fraction **79.0459%** of current NAV.
 - **No current stock-level price marks** in this screenshot; do not assign the other EUR −86.66 change to individual names or recompute volatility/covariance based only on this account-level NAV.
 
 ## Required next validation
