@@ -1,20 +1,20 @@
 {
   "paused": true,
   "as_of": "2026-11-20",
-  "reason": "DSY 30 shares @ EUR 22.75 sale executed per participant; the 18 Nov model anchor still holds 90 DSY, so daily NAV estimation is paused. AD.AS and UNA.AS now also have separately confirmed pending orders, neither included in actual holdings.",
+  "reason": "Three participant-confirmed executions on 20 Nov: DSY 30-share sell at EUR 22.75, AD 25-share buy and UNA 20-share buy (individual buy fill prices unknown). Current 23-name holdings differ from 18-Nov frozen 21-name monitor; do not issue stale NAV report.",
   "existing_monitor_anchor": "2026-11-18",
   "report_state": "Older reports remain historical estimates and must not be represented as current post-trade portfolio values.",
-  "resume_condition": "Obtain a synchronized, reconciled post-execution NextWise full 21-position and cash NAV snapshot, with Ahold pending/fill status, update monitor_config.json and tests, then set paused=false.",
-  "pending_order": "Two separate user-reported pending BUY orders: AD.AS 25 @ max EUR 34.30 and UNA.AS 20 @ max EUR 58.40, no confirmed fills; do not count in holdings/cash debits.",
+  "resume_condition": "Obtain synchronized post-execution per-security prices/marks and verified quantity/cash baseline for all 23 names; update monitor_config.json and risk calculations; only then set paused=false.",
+  "pending_order": "No pending orders reported after 18:05: participant explicitly confirms both AD.AS and UNA.AS are executed.",
   "read_only": true,
   "latest_observed_post_sale_summary": {
     "date": "2026-11-20",
-    "clock": "13:55 Europe/Rome, from visible screenshot clock",
-    "nav_eur": 49316.53,
-    "equities_eur": 38958.27,
-    "cash_eur": 10358.26,
-    "performance_pct": -1.71,
-    "provenance": "NextWise user-supplied portfolio overview screenshot, not synchronized stock-by-stock prices"
+    "clock": "18:05 Europe/Rome, user-reported; image cropped without visible device clock",
+    "nav_eur": 49322.18,
+    "equities_eur": 40985.32,
+    "cash_eur": 8336.86,
+    "performance_pct": -1.7,
+    "provenance": "NextWise cropped account screenshot user provided at 18:05, after both buys reported executed"
   },
   "dsy_execution_reconciliation": {
     "shares_reported": 30,
@@ -26,25 +26,31 @@
     "reconciliation_gap_eur": 0,
     "provenance": "user confirmed correction from initially reported EUR 22.68; cash screenshot matches exactly"
   },
-  "pending_orders": [
+  "pending_orders": [],
+  "reserved_order_notional_eur_if_both_active": 0,
+  "executed_buy_orders_user_confirmed": [
     {
       "ticker": "AD.AS",
-      "action": "BUY",
-      "quantity_reported": 25,
-      "limit_eur_reported": 34.3,
-      "status": "PENDING_USER_CONFIRMED",
-      "gross_limit_commitment_eur": 857.5,
-      "counts_as_holding": false
+      "quantity_from_previous_ticket": 25,
+      "price_per_share_eur": null,
+      "limit_eur": 34.3,
+      "status": "EXECUTED_USER_CONFIRMED"
     },
     {
       "ticker": "UNA.AS",
-      "action": "BUY",
-      "quantity_reported": 20,
-      "limit_eur_reported": 58.4,
-      "status": "PENDING_USER_CONFIRMED",
-      "gross_limit_commitment_eur": 1168,
-      "counts_as_holding": false
+      "quantity_from_previous_ticket": 20,
+      "price_per_share_eur": null,
+      "limit_eur": 58.4,
+      "status": "EXECUTED_USER_CONFIRMED"
     }
   ],
-  "reserved_order_notional_eur_if_both_active": 2025.5
+  "buy_cash_reconciliation": {
+    "cash_before_eur": 10358.26,
+    "cash_after_eur": 8336.86,
+    "aggregate_cash_outflow_eur": 2021.4,
+    "combined_order_limit_eur": 2025.5,
+    "nominal_improvement_vs_limits_eur": 4.1,
+    "individual_fill_prices_eur": "NOT_CONFIRMED",
+    "assumption": "No other cash movements between screenshots; report aggregate only."
+  }
 }
