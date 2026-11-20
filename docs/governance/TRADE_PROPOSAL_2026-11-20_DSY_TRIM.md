@@ -60,3 +60,18 @@ Assuming **30 shares execute exactly at EUR 22.70** while all other marked posit
 - Public intraday quote (time-bound): https://www.boursorama.com/cours/consensus/1rPDSY/
 
 **No actual NextWise order placed by ChatGPT. A user action is required.**
+
+## User-reported Dassault sale at EUR 22.68 — execution reconciliation pending
+
+**Participant statement:** "ho venduto a 22,68" on 20 November 2026, following the proposed 30-share DSY trim. Treat **EUR 22.68 as user-reported sale price**, but the participant has **not explicitly confirmed quantity, filled vs pending status, execution timestamp, order type or fees** in this message. **Do not mark the proposed 30-share sale as a verified fill or edit actual holdings yet.**
+
+**Discrepancy with pre-trade instruction:** the proposed sell LIMIT floor was **EUR 22.70**. A genuine EUR 22.70 limit sell should not execute at EUR 22.68; the actual order type, entered limit, or reported price/fee convention must be checked using the NextWise transaction/order detail. EUR 0.02/share = EUR 0.60 if 30 shares; this is a trade-process variance, **not evidence by itself of improper platform execution**.
+
+**Conditional accounting only if 30 DSY shares were actually filled at EUR 22.68, ignoring fees:**
+- Gross proceeds = **EUR 680.40**.
+- DSY shares: **90 -> 60**; pre-sale screenshot price EUR 22.77 was an earlier mark, not the executed price.
+- Cash before EUR 9,675.76 -> **EUR 10,356.16** in a static scenario, with the Ahold pending BUY still unfilled and without accounting for cash reservations or other movements.
+- Illustrative realized loss relative to the displayed EUR 25.49 average purchase quote: **EUR -84.30** (30 x (22.68 - 25.49)), excluding fee/book-cost discrepancies. This is **not an additional loss created by selling**; it converts already marked risk into cash.
+- Remaining exposure at the reported EUR 22.68 price: **60 x 22.68 = EUR 1,360.80**; the whole NAV must be re-marked from NextWise after execution and must not be computed using stale other-company marks.
+
+**Outstanding action:** participant must confirm whether 30 were executed, whether order shows *Eseguito*, exact submitted order type/limit, and updated cash if available. Enter a definitive transaction and create a new dated 21-name actual snapshot only after verification. No NextWise trade was sent by GitHub or ChatGPT.
