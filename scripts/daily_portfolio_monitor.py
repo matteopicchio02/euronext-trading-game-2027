@@ -313,6 +313,16 @@ def main() -> None:
     )
     args = parser.parse_args()
     config, positions = read_inputs(Path(args.config))
+    # A manually reported fill after the snapshot invalidates the frozen
+    # quantities and cash; fail closed even on a manual CLI run.
+    gate_file = ROOT / "data" / "monitor_reconciliation_gate.json"
+    if gate_file.exists():
+        gate = json.loads(gate_file.read_text(encoding="utf-8"))
+        if gate.get("paused") is True:
+            raise RuntimeError(
+                "NAV monitor on reconciliation hold after user-reported execution: "
+                + str(gate.get("reason", "updated broker screenshot required"))
+            )
     raw, adjusted = download_yahoo(positions.ticker.tolist())
     summary, estimated = build_estimate(
         config, positions, raw, adjusted,
