@@ -13,9 +13,15 @@
 | 18 Nov 2026 | VaR/volatility/HHI/risk contributions, optimizer, OOS diagnostics, fundamental screening and five Euronext candidates | Hypothetical alternative portfolios tested. Retrospective selected-universe and historical-return limitations expressly documented |
 | 18 Nov 2026, committee close | **HOLD / NO TRADE** on all 21 positions; decision recorded in GitHub | **No new NextWise order executed through this research workflow.** The ordinary ranking is not visible until month-end |
 
+| 20 Nov 2026, 09:54–09:55 | Full pre-trade 21-name NextWise snapshot reconciled | NAV EUR 49,519.84, cash EUR 9,675.76; screenshot-time prices not synchronized to market close |
+| 20 Nov 2026 | **Executed:** participant sells 30 DSY.PA at **EUR 22.75**, retains 60 | Gross EUR 682.50 exactly matches the observed account-cash increase to EUR 10,358.26; earlier EUR 22.68 was explicitly corrected |
+| 20 Nov 2026, 13:55 | NextWise intraday NAV EUR 49,316.53 | Cash EUR 10,358.26; Ahold and Unilever buy orders previously pending; only 21 names executed at this moment |
+| 20 Nov 2026, 18:05 | Participant confirms both **AD.AS 25-share** and **UNA.AS 20-share** BUY orders **executed** | NextWise shows NAV EUR 49,322.18, equities EUR 40,985.32, cash EUR 8,336.86; aggregate cash outflow EUR 2,021.40 vs proposed limit aggregate EUR 2,025.50. Exact individual buy fill prices not available, so no per-ticker allocation of EUR 4.10 savings |
+| 20 Nov 2026 | Project Alpha recognizes **23 holdings**, updates event and quantity ledgers | Earlier 21-holding marks archived, not overwritten; daily NAV estimator paused until synchronized post-fill 23-ticker values are reconciled; Ahold watchlist status changed from pending buy to held position |
+
 ## What is not reconstructed
 
-- Comprehensive **executed orders** with timestamps, partial fills, commission assumptions, and actual portfolio cash movement since account opening.
+- Comprehensive **pre-20-Nov executed orders** with timestamps, partial fills, and commission assumptions since account opening. For 20 Nov, DSY sale price and overall cash movements were reconciled; AD/UNA **individual executed prices**, fees, and timestamps remain to be documented.
 - Realized P&L, dividends and EUR/NOK conversion effects explaining the performance reference shown in NextWise.
 - Official month-end rankings and criterion weights. The December and later strategy must not pretend these existed on 18 November.
 - Complete price-adjustment/corporate-action provenance for every historical screen.
