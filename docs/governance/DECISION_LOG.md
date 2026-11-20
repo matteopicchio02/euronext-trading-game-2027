@@ -16,6 +16,8 @@ This is the chronological record of portfolio decisions for the Euronext Trading
 
 | 2026-11-20 | DSY partial sell order proposal | **PROPOSED — SELL 30 of 90 DSY.PA; limit minimum EUR 22.70** | **NOT SENT / NO FILL CONFIRMED** | 49,519.84 (pre-trade 09:54 snapshot) | Reassess time-to-catalyst mismatch and 2029 CMD analyst concern; reduce one-third position-specific downside risk while keeping majority exposure. Gross EUR 681 if 30 shares fill at price floor, not a booked transaction. Existing Ahold 25 @ EUR 34.30 remains participant-reported pending. | [DSY pre-trade memo](./TRADE_PROPOSAL_2026-11-20_DSY_TRIM.md) | Participant verifies actual NextWise order ticket, limit and fill status; no holdings/cash updates before confirmed fill |
 
+| 2026-11-20 | DSY sale reported at EUR 22.68 | **PARTICIPANT REPORTS SALE — quantity and fill status verification outstanding** | **Reported sell price EUR 22.68; 30 shares inferred from earlier proposal, not yet explicitly confirmed. No order sent by ChatGPT** | 49,519.84 (morning pre-trade snapshot) | The proposed EUR 22.70 sell-limit floor differs from the reported EUR 22.68 price; verify NextWise order type/entered limit, actual fill, fees and updated cash. If 30 filled, proceeds would be EUR 680.40 gross, 60 DSY remain, and cash EUR 10,356.16 assuming Ahold unfilled, no other changes and no fees. These are NOT verified holdings. | [DSY pre-trade memo and reported trade reconciliation](./TRADE_PROPOSAL_2026-11-20_DSY_TRIM.md) | Confirm Eseguito/Pendente, exact filled quantity, order type, cash and fill timestamp before updating current portfolio |
+
 
 ## 2026-11-18 snapshot and model state
 - 21 equity holdings: EUR 40,488.99; cash: EUR 9,675.76 (19.29%); total NAV: EUR 50,164.75.
