@@ -1,0 +1,27 @@
+{
+  "as_of": "2026-11-20",
+  "currency": "EUR",
+  "read_only": true,
+  "review_not_order": true,
+  "market_data_provider": "Yahoo Finance daily close (delayed)",
+  "rules": [
+    {
+      "ticker": "AD.AS",
+      "name": "Ahold Delhaize",
+      "review_at_or_below_eur": 33,
+      "pending_order_user_reported": true,
+      "reported_pending_quantity": 25,
+      "reported_pending_limit_eur": 34.3,
+      "order_status_verified_from_platform": false,
+      "reason": "USER-REPORTED PENDING BUY LIMIT. Do NOT submit a duplicate order. Recheck NextWise status before interpreting price thresholds; screenshot-level fill not yet verified."
+    },
+    {
+      "ticker": "INGA.AS",
+      "name": "ING Group",
+      "review_at_or_below_eur": 27,
+      "pending_order_user_reported": false,
+      "reason": "No order reported. Recheck FY2027 earnings, capital and credit costs; analyst research trigger only."
+    }
+  ],
+  "note": "Research-monitor config as-of 20 Nov. User says Ahold 25-share limit EUR 34.30 remains pending; no automated NextWise access or fill verification. Review status manually after expiry/cancellation/fill. Do not generate orders."
+}
