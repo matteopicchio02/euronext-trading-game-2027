@@ -51,17 +51,26 @@ def test_missing_symbol_rejected():
         review_prices(config,closes.drop(columns=["INGA.AS"]),datetime(2026,11,19,22,tzinfo=ROME))
 
 
-def test_user_reported_pending_ahold_order_blocks_duplicate_buy_signal():
+def test_user_reported_held_ahold_order_never_generates_new_buy_signal():
     config = load_rules(ROOT / "data/price_review_levels_2026-11-20.json")
     _, closes = sample()
     closes.loc["2026-11-19", "AD.AS"] = 32.95
     result = review_prices(config, closes, datetime(2026, 11, 19, 22, tzinfo=ROME))
     ad = result["entries"][0]
-    assert ad["status"] == "PENDING_ORDER_VERIFY_WITH_NEXTWISE"
-    assert ad["reported_pending_quantity"] == 25
-    assert ad["reported_pending_limit_eur"] == pytest.approx(34.30)
-    assert "do not place a duplicate" in report_text(result).lower()
+    assert ad["status"] == "HELD_POSITION_MONITOR"
+    assert ad["reported_held_quantity"] == 25
+    assert ad["reported_pending_quantity"] is None
+    assert "not a fresh buy entry" in report_text(result).lower()
     assert result["entries"][1]["status"] == "WAIT"
+
+
+def test_pending_and_held_cannot_be_active_together():
+    config, closes = sample()
+    config["rules"][0]["held_in_portfolio_reported"] = True
+    config["rules"][0]["reported_held_quantity"] = 25
+    config["rules"][0]["pending_order_user_reported"] = True
+    with pytest.raises(ValueError, match="simultaneously"):
+        review_prices(config, closes, datetime(2026, 11, 19, 22, tzinfo=ROME))
 
 
 def test_pending_input_fails_closed_when_limit_missing():
