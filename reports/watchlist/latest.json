@@ -1,6 +1,6 @@
 {
-  "quote_date": "2026-11-19",
-  "generated_rome": "2026-11-19T22:36:28+01:00",
+  "quote_date": "2026-11-20",
+  "generated_rome": "2026-11-20T22:32:46+01:00",
   "source": "Third-party Yahoo Finance raw daily closing data (may be delayed), NOT NextWise",
   "execution": "NO ORDERS; read-only research",
   "note": "Price threshold is an analyst review trigger, not an order instruction",
@@ -8,20 +8,26 @@
     {
       "ticker": "AD.AS",
       "name": "Ahold Delhaize",
-      "close_eur": 34.299999,
+      "close_eur": 34.580002,
       "review_below_eur": 33.0,
-      "distance_pct": 3.9394,
-      "status": "WAIT",
-      "reason": "Rerun EPS/multiple valuation after cyber guidance revisions; not an automatic buy or limit order"
+      "distance_pct": 4.7879,
+      "status": "HELD_POSITION_MONITOR",
+      "reported_held_quantity": 25,
+      "reported_pending_quantity": null,
+      "reported_pending_limit_eur": null,
+      "reason": "User confirms AD.AS BUY order executed (25 shares under prior ticket), 20 Nov 18:05. Now HELD; never show as fresh candidate buy. Individual fill price pending review; no direct account API."
     },
     {
       "ticker": "INGA.AS",
       "name": "ING Group",
-      "close_eur": 28.200001,
+      "close_eur": 27.195,
       "review_below_eur": 27.0,
-      "distance_pct": 4.4444,
+      "distance_pct": 0.7222,
       "status": "WAIT",
-      "reason": "Recheck FY2027 earnings, capital and credit cost estimates before any order; not an automatic buy or limit order"
+      "reported_held_quantity": null,
+      "reported_pending_quantity": null,
+      "reported_pending_limit_eur": null,
+      "reason": "No order reported. Recheck FY2027 earnings, capital and credit costs; analyst research trigger only."
     }
   ]
 }

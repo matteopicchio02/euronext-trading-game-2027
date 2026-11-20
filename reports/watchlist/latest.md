@@ -1,15 +1,17 @@
-# Project Alpha — Candidate review levels (2026-11-19)
-
-> **HISTORICAL 19-NOV REPORT — NOT CURRENT PORTFOLIO STATUS.** The participant confirmed an Ahold Delhaize BUY fill on 20 Nov. AD.AS is now a held position (25 shares from the reported order ticket), **not** a new buy candidate. See [20-Nov execution record](../snapshots/EXECUTED_BUYS_2026-11-20_1805.md). The next scheduled review uses the updated held-position rule.
+# Project Alpha — Candidate review levels (2026-11-20)
 
 > **NO TRADES. NOT OFFICIAL NEXTWISE QUOTES OR AUTO-ORDER SIGNALS.**
 > A breached price level invites human review of EPS, valuation,
 > corporate news, risk and the account's actual available order price.
+> PENDING_ORDER_VERIFY_WITH_NEXTWISE means a user-reported outstanding order:
+> **do not place a duplicate**. This tool cannot check NextWise fills or cancellations.
+> HELD_POSITION_MONITOR means a user-reported existing holding:
+> review position risk and fundamentals, **not a fresh buy entry**.
 
 | Candidate | Yahoo close EUR | Review at/below EUR | Distance to threshold | Status |
 |---|---:|---:|---:|---|
-| Ahold Delhaize (AD.AS) | 34.30 | 33.00 | +3.94% | WAIT |
-| ING Group (INGA.AS) | 28.20 | 27.00 | +4.44% | WAIT |
+| Ahold Delhaize (AD.AS) | 34.58 | 33.00 | +4.79% | HELD_POSITION_MONITOR |
+| ING Group (INGA.AS) | 27.20 | 27.00 | +0.72% | WAIT |
 
 If REVIEW_FUNDAMENTALS is shown, **do not place an order**.
 First re-check guidance, FY2027 EPS, valuation assumptions, portfolio risk and NextWise order permissions.
