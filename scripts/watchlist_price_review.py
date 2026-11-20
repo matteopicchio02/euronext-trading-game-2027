@@ -80,13 +80,25 @@ def review_prices(
         threshold = float(rule["review_at_or_below_eur"])
         if not np.isfinite(close) or close <= 0:
             raise ValueError("Invalid close")
+        pending = rule.get("pending_order_user_reported", False)
+        if not isinstance(pending, bool):
+            raise ValueError("pending_order_user_reported must be a boolean")
+        if pending:
+            if not isinstance(rule.get("reported_pending_quantity"), int) or rule["reported_pending_quantity"] <= 0:
+                raise ValueError("Pending order requires a positive reported quantity")
+            limit = float(rule.get("reported_pending_limit_eur", 0))
+            if not np.isfinite(limit) or limit <= 0:
+                raise ValueError("Pending order requires a valid reported limit")
         rows.append({
             "ticker": ticker,
             "name": rule["name"],
             "close_eur": round(close, 6),
             "review_below_eur": threshold,
             "distance_pct": round((close/threshold - 1.0)*100.0, 4),
-            "status": "REVIEW_FUNDAMENTALS" if close <= threshold else "WAIT",
+            "status": ("PENDING_ORDER_VERIFY_WITH_NEXTWISE" if pending
+                       else ("REVIEW_FUNDAMENTALS" if close <= threshold else "WAIT")),
+            "reported_pending_quantity": rule.get("reported_pending_quantity") if pending else None,
+            "reported_pending_limit_eur": rule.get("reported_pending_limit_eur") if pending else None,
             "reason": rule["reason"],
         })
     return {
@@ -105,6 +117,8 @@ def report_text(result: dict) -> str:
         "> **NO TRADES. NOT OFFICIAL NEXTWISE QUOTES OR AUTO-ORDER SIGNALS.**",
         "> A breached price level invites human review of EPS, valuation,",
         "> corporate news, risk and the account's actual available order price.",
+        "> PENDING_ORDER_VERIFY_WITH_NEXTWISE means a user-reported outstanding order:",
+        "> **do not place a duplicate**. This tool cannot check NextWise fills or cancellations.",
         "",
         "| Candidate | Yahoo close EUR | Review at/below EUR | Distance to threshold | Status |",
         "|---|---:|---:|---:|---|",
@@ -134,7 +148,7 @@ def save(result: dict, output: Path) -> None:
 
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--rules", type=Path, default=ROOT/"data/price_review_levels_2026-11-19.json")
+    p.add_argument("--rules", type=Path, default=ROOT/"data/price_review_levels_2026-11-20.json")
     p.add_argument("--output-dir", type=Path, default=ROOT/"reports/watchlist")
     args = p.parse_args()
     config = load_rules(args.rules)
