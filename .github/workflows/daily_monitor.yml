@@ -26,23 +26,48 @@ jobs:
         with:
           persist-credentials: true
 
+      - name: Snapshot reconciliation gate (do not publish stale NAV after a trade)
+        id: trade_gate
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          state = json.loads(Path("data/monitor_reconciliation_gate.json").read_text())
+          if state.get("read_only") is not True or not isinstance(state.get("paused"), bool):
+              raise ValueError("Invalid monitor reconciliation state")
+          ready = "false" if state["paused"] else "true"
+          with open(os.environ["GITHUB_OUTPUT"], "a") as fp:
+              fp.write(f"ready={ready}\n")
+          if ready == "false":
+              print("SAFE HOLD — stale historical anchor after reported executed DSY trade.")
+              print(state["reason"])
+              print("No NAV/risk report generated until a post-trade screenshot is reconciled.")
+          else:
+              print("Reconciliation gate open. Normal market-data quality gates still apply.")
+          PY
+
       - name: Set up Python
+        if: steps.trade_gate.outputs.ready == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install local research package with data dependency
+        if: steps.trade_gate.outputs.ready == 'true'
         run: |
           python -m pip install --upgrade pip
           python -m pip install -e ".[data]"
 
       - name: Estimate holdings using Yahoo daily closes and historical EUR risk
+        if: steps.trade_gate.outputs.ready == 'true'
         run: |
           python scripts/daily_portfolio_monitor.py
         # A missing, stale, mismatched or anomalous market price FAILS the job.
         # No fake report is committed on a failed run.
 
       - name: Upload model output for inspection
+        if: steps.trade_gate.outputs.ready == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: alpha-monitor-${{ github.run_id }}
@@ -54,6 +79,7 @@ jobs:
           if-no-files-found: error
 
       - name: Commit only estimated daily model reports
+        if: steps.trade_gate.outputs.ready == 'true'
         shell: bash
         run: |
           git config user.name "project-alpha-monitor[bot]"
