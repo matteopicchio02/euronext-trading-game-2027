@@ -9,11 +9,11 @@
       "ticker": "AD.AS",
       "name": "Ahold Delhaize",
       "review_at_or_below_eur": 33,
-      "pending_order_user_reported": true,
-      "reported_pending_quantity": 25,
-      "reported_pending_limit_eur": 34.3,
+      "pending_order_user_reported": false,
       "order_status_verified_from_platform": false,
-      "reason": "USER-REPORTED PENDING BUY LIMIT. Do NOT submit a duplicate order. Recheck NextWise status before interpreting price thresholds; screenshot-level fill not yet verified."
+      "reason": "User confirms AD.AS BUY order executed (25 shares under prior ticket), 20 Nov 18:05. Now HELD; never show as fresh candidate buy. Individual fill price pending review; no direct account API.",
+      "held_in_portfolio_reported": true,
+      "reported_held_quantity": 25
     },
     {
       "ticker": "INGA.AS",
@@ -23,5 +23,5 @@
       "reason": "No order reported. Recheck FY2027 earnings, capital and credit costs; analyst research trigger only."
     }
   ],
-  "note": "Research-monitor config as-of 20 Nov. User says Ahold 25-share limit EUR 34.30 remains pending; no automated NextWise access or fill verification. Review status manually after expiry/cancellation/fill. Do not generate orders."
+  "note": "20 Nov 18:05 user confirms AD.AS and UNA.AS purchases executed. The watchlist is review-only; AD.AS must be treated as an EXISTING HELD position, not new buy or pending order. No automatic execution or account access."
 }
