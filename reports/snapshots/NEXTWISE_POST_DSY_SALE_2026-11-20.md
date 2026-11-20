@@ -25,17 +25,21 @@ The NAV difference versus the original EUR 50,000 virtual endowment is **EUR −
 
 The EUR **−86.66** NAV change is a between-screens account movement. It cannot be attributed entirely to the DSY sale, as other market marks/FX may have moved between screenshots. Transferring holdings to cash in itself does not create or erase NAV apart from price differences, fees and other adjustments.
 
-## Execution-control exception: EUR 2.10
+## Execution-control reconciliation — ZERO cash residual
 
-The participant said they sold Dassault Systèmes at **EUR 22.68**, and subsequently confirmed the order status as **executed**. The proposed ticket was **30 shares**, with seller limit floor **EUR 22.70** (the exact submitted order type/terms and receipt are NOT yet independently visible).
+The participant **explicitly corrected** the earlier EUR 22.68 price and confirmed the actual Dassault Systèmes sale price of **EUR 22.75/share**. This supersedes the initial statement. The intended sale quantity was 30 shares and DSY execution status was reported **Eseguito**.
 
-Conditional arithmetic:
-- If **30 shares** executed at **EUR 22.68**, gross proceeds are **EUR 680.40**.
-- Cash difference shown by NextWise between the two screenshots is **EUR +682.50**.
-- **Cash reconciliation gap = +EUR 2.10** (unexplained).
-- If all EUR 682.50 arose strictly from 30 sold shares with no other bookings/fees, their effective price would be **EUR 22.75 per share**.
+| Check | Amount |
+|---|---:|
+| 30 executed shares × confirmed EUR 22.75 | **EUR 682.50** |
+| NextWise account cash increase between screenshots | **EUR +682.50** |
+| **Residual, on reported 30-share trade** | **EUR 0.00** |
+| Proposed minimum sell limit | EUR 22.70 |
+| Confirmed price above limit | EUR +0.05/share, EUR +1.50 for 30 shares |
 
-**Do not assert EUR 22.75 as the actual sale price:** cash could include an unrelated dividend/cash flow, platform-specific settlement, fee adjustment, a delayed prior posting, or the initial EUR 22.68 may have been the displayed quote rather than the execution price. A normal EUR 22.70 sell limit cannot execute for EUR 22.68 per share before any fee-display differences; this merits ticket-level checking, not accusations of platform error.
+The user-confirmed execution price now fully explains the cash increase, assuming no offsetting unrelated cash bookings. The screenshot shows account cash but **not** the order receipt or fees separately. Do not infer a precise timestamp or independently confirmed order type from these data.
+
+The earlier apparent EUR 2.10 discrepancy was caused by using the initial, subsequently corrected EUR 22.68 figure; **it is resolved**. The indicative book loss at historical displayed EUR 25.49 acquisition price is now **EUR −82.20** on 30 shares, before any applicable accounting adjustments.
 
 ## Current modeled position status
 
@@ -47,7 +51,7 @@ Conditional arithmetic:
 
 ## Required next validation
 
-Read NextWise **Transazioni** / DSY execution detail to establish **executed quantity, actual fill price, order type, entered limit, timestamp, fees and any other cash movement**; check DSY position card shows 60. Preserve earlier price and order claims as participant reports, never silently overwrite with the mathematically implied EUR 22.75.
+Optional final receipt-level validation: check the NextWise **Transazioni** row for the 30-share fill at the **user-confirmed EUR 22.75** price, recorded order type/limit, timestamp and fees; verify the DSY card shows 60 shares. The earlier EUR 22.68 statement remains in the version history but has been explicitly superseded.
 
 The scheduled market-data NAV monitor is **deliberately gated** because its old frozen 18 November holdings still show 90 DSY shares. Re-enable only after a safe post-trade portfolio price-basis reconciliation.
 
