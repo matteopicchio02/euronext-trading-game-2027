@@ -1,18 +1,18 @@
-# Methodology
+# Methodology — methods I'm learning and testing
 
-## 1. Problem framing
+## 1. Why I'm studying these methods
 
-The score has six criteria with unpublished weights, a field of thousands of students, and **one** national
-winner. Three consequences:
+I'm using this first project to connect concepts from my MSc classes with a virtual investment portfolio. My approach is **experimental**: I build a simple model, examine what it suggests, and then try to understand its assumptions and weaknesses.
 
-1. **Structure criteria are cheap.** HHI, number of sectors, diversification ratio and UCITS compliance depend on how
-   the book is built, not on market direction. Maxing them removes four chances to lose rank for free.
-2. **Return criteria are mostly luck plus beta.** Over about 110 trading days the cross-sectional signal-to-noise ratio is low:
-   with a true alpha dispersion of 10% a year and 25% idiosyncratic volatility, even a good signal realises an
-   information coefficient of roughly 0.05 over the game.
-3. **Payoff is convex in rank.** Only first place advances, so risk should rise when behind late in the game and fall when clearly ahead.
+The Trading Game refers to several assessment dimensions, including returns and portfolio diversification. Because I do not have verified numerical weights for all the criteria, I **cannot calculate an official competition score or optimise it reliably**.
 
-## 2. Factor model (prior weights)
+Three working ideas guide my research:
+
+1. **Separate controllable choices from uncertain market returns.** Portfolio weights, sectors and concentration can be measured and changed; future stock performance cannot be known in advance.
+2. **Treat short-horizon return forecasts cautiously.** In a competition lasting a few months, price movements and estimation noise can overwhelm a weak statistical signal. The information coefficient values below are illustrative *assumptions*, not something I have measured for my own strategy.
+3. **Test different objectives instead of assuming one is best.** Return, downside risk and diversification may lead to different portfolios. A rank-based scenario is worth exploring, but not proof that taking more risk improves the chance of winning.
+
+## 2. An initial factor model (subjective research weights)
 
 | Factor | Weight | Inputs |
 |---|---|---|
@@ -23,23 +23,23 @@ winner. Three consequences:
 | Valuation | 10% | Analyst score; low weight because valuation rarely pays inside five months |
 | Diversification | 10% | Negative average pairwise correlation to the rest of the universe |
 
-Missing factors have their weight redistributed. **These weights are not optimised.** Test them on data not used to set them.
+Missing factors have their weight redistributed. **I chose these initial weights as a starting hypothesis, not because they have been validated or optimised.** A proper comparison needs holdout data and sensitivity checks.
 
-## 3. From score to weights
+## 3. Translating a score into portfolio weights
 
 * Expected excess return: `alpha = IC * sigma * z` (Grinold) with IC = 0.05 on purpose, so the optimiser does not over-trust the score.
 * Selection: best name in each of the 10 best sectors, then fill to N by score with at most 3 names per sector.
 * Optimisation (`alpha.optimizer`): maximise `w.alpha - 0.5*lambda*w'Sigma*w - eta*sum(w^2) + delta*DR(w)` subject to bounds, sector cap and beta band, then repair to 5/10/40.
 
-## 4. Score-structure simulator
+## 4. A simulated competition environment
 
 `alpha.scoring_sim` draws 6 criterion weights from a Dirichlet distribution, simulates synthetic prices (market + sector + idiosyncratic factors
 with true alpha) and a field of 400 competitors (25% concentrated gamblers, 40% typical, 20% diversified, 15% ETF-heavy, no skill), scores
 every participant by percentile rank on each criterion, and records where each of our designs finishes.
 
-Reading the output: it shows which **designs** are robust to weight uncertainty. It does not predict returns, and the field mix is an assumption.
+**How I interpret this exercise:** it compares portfolio designs under assumptions I selected. The simulated competitor types, criterion weights and return distributions are not observations of real participants. The results are **not probabilities of winning** or forecasts of actual market returns.
 
-## 5. Drawdown calibration
+## 5. Exploring drawdowns with Monte Carlo
 
 Monte Carlo of Gaussian daily returns over 110 trading days (5% annual drift):
 
@@ -49,15 +49,15 @@ Monte Carlo of Gaussian daily returns over 110 trading days (5% annual drift):
 | 15% | 9.2% | 62% | 21% |
 | 17% | 10.5% | 73% | 31% |
 
-So 8% marks an ordinary bad stretch (review, cheap) and 13% a genuinely bad one (about one path in five at 15% vol). Real returns have fat tails, so these are lower bounds.
+In this **Gaussian simulation**, an 8% drawdown is quite common and a 13% drawdown less frequent at the chosen volatility. I use the table to compare sensitivity to thresholds, **not to promise real-world drawdown probabilities**: fat tails, clustering and changing volatility can produce substantially different outcomes.
 
-## 6. Validation plan
+## 6. How I plan to validate the models
 
 * Walk-forward: set weights on data up to date T, evaluate on T to T+3 months, roll forward.
 * Report the hit rate, rank IC and turnover, not only the return.
 * Keep every decision in `docs/governance/DECISION_LOG.md` so the result can be audited against the process.
 
-## 7. Actual-portfolio checkpoint: 18 November 2026
+## 7. Comparing a model with an actual virtual-account snapshot (18 November 2026)
 
 The original 26-name `data/portfolio_v1.csv` and the synthetic competitor Monte Carlo remain **historical research fixtures**. The actual NextWise 18 November snapshot has **21 equities** and 19.29% cash, recorded in `data/portfolio_actual_2026-11-18.csv`.
 
