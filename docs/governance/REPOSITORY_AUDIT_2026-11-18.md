@@ -1,4 +1,6 @@
 # Repository Quality Audit — 18 November 2026
+
+> **Historical learning-project audit:** This file records what was checked on **18 November 2026**. It is kept to document the development process; it is **not** a current report on the repository or portfolio. Some wording below reflects the project's earlier, more formal documentation style. **As of 22 November 2026, GitHub reports that the repository is public**, whereas the original audit was written when it was described as private. The latest student-oriented introduction is in the [main README](../../README.md).
 **Target:** `matteopicchio02/euronext-trading-game-2027`, branch `main` (private). Scope: source-code review, GitHub file inventory, tests/CI, present/archival data, rule references, user-reported historical project progression and research reports.
 
 ## Corrections implemented directly on main
