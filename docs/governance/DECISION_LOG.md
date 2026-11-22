@@ -1,6 +1,10 @@
-# Project Alpha 2027 — Decision Log
+# Project Alpha 2027 — My research and trading notes
 
-This is the chronological record of portfolio decisions for the Euronext Trading Game 2026–2027. Portfolio values are virtual. Log decisions before any order; distinguish proposal, authorization, execution, and review.
+I'm keeping this log as part of my MSc learning project. It helps me check whether my **initial idea, what I actually submitted in the virtual game, and the eventual result** match.
+
+Some older entries use professional-sounding labels such as *Investment Committee*, *trade proposal* or *governance*. I used these formats to practise structured financial writing; **they are not records of a professional investment committee or an advisory service**.
+
+Portfolio values are virtual and date-specific. A research proposal is **not** a transaction, and a user-reported execution can still lack separate fill-price evidence. I keep historical entries unchanged to preserve what was known at each date, even when later data correct a previous assumption.
 
 | Date | Scope | Decision | Execution | NAV snapshot (EUR) | Rationale | Research memo | Review |
 |---|---|---|---|---:|---|---|---|
