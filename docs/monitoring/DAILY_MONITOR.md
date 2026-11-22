@@ -1,8 +1,12 @@
-# Project Alpha 2027 — Daily Monitor (semi-automatic, NO NextWise access)
+# My daily portfolio monitor — a Python learning project (no NextWise access)
 
-## Status and contract
+## What I'm trying to build — and its current status
 
-This workflow estimates the value and risk of the 21 stocks in the verified **18 Nov 2026 NextWise snapshot**. It **does not** connect to NextWise, read its official account, place orders, infer new trades, or certify Euronext scores. The portfolio is a hypothetical **unchanged-holdings scenario** until the user supplies an updated, verified screenshot or fill record.
+I built this small workflow to practise **working with dated price data, currency conversion, data checks and portfolio risk calculations**. It is a learning tool, **not** a live trading dashboard.
+
+The original workflow estimates the value and risk of the **21 stocks recorded on 18 November 2026**, assuming their quantities and cash never change. This assumption stopped being valid after the virtual transactions reported on **20 November**, when the account moved to **23 holdings**. For that reason, the automated NAV publication is **currently paused** through a reconciliation check.
+
+The workflow **does not connect to NextWise**, read the actual account, place orders, discover trades or certify Euronext scores. A previously generated estimate remains a historical model result, **not a current balance**.
 
 **Source files:**
 - `data/portfolio_actual_2026-11-18.csv`: quantity, sector and **EUR position valuation** from the NextWise cards.
@@ -16,7 +20,7 @@ This workflow estimates the value and risk of the 21 stocks in the verified **18
 GitHub Actions schedule is `37 20 * * 1-5` **UTC**, normally **21:37 in Rome in winter** and **22:37 in summer**, after most Euronext cash markets close. GitHub schedule executions may be **delayed or skipped**; this is not a real-time alerting service.
 
 To run manually after European markets close:
-1. Open the private GitHub repo.
+1. Open this GitHub repository (currently public).
 2. Select **Actions** > **Daily Portfolio Monitor (indicative, no orders)**.
 3. Select **Run workflow** > branch **main** > **Run workflow**.
 4. Open that run. Check the indicator and downloaded `alpha-monitor-...` artifact. On success, the workflow commits changes **only** under `reports/daily/`. 
@@ -50,7 +54,7 @@ Successful runs write:
 - `reports/daily/positions_YYYY-MM-DD.csv` — estimated positions and research risk contributions.
 - `reports/daily/latest.md`, `latest_positions.csv`, `latest_summary.json` — newest successful estimate.
 
-Files on GitHub will appear **only after the first successful post-close execution**. The existence of the workflow and passing unit tests are **not proof the Yahoo download has run successfully**.
+Files appear **only after a successful market-data run**. Historical reports in `reports/daily/` cover earlier dates; they do **not** show the current post-trade portfolio. Passing unit tests alone does not prove live market-data availability or reconcile NextWise cash.
 
 ## Local Windows command
 
@@ -75,11 +79,11 @@ This monitor **does not discover transactions**. If a share quantity, holding or
 5. Validate that the new anchor is truly comparable to Yahoo's daily market close; an *intraday* NextWise snapshot must not be treated as an end-of-day close.
 6. The next report will model **unchanged holdings since the newly verified date**.
 
-Until these steps are done, daily output stays in *unreconciled estimate* mode.
+**At the current 23-position stage, the workflow is intentionally gated and does not publish a new NAV estimate.** This is preferable to displaying a plausible-looking but incorrect value.
 
-## Safety and privacy
+## Data accuracy, safety and visibility
 
-- The repo remains **private** while current competition holdings are included.
+- **Visibility note:** GitHub currently reports this repository as **public**. It contains dated virtual competition holdings. Review what should remain publicly visible before adding any further account details; GitHub privacy settings are separate from the Python workflow.
 - No NextWise login, password, cookie, token or unapproved private API endpoint is used.
 - GitHub Actions `contents: write` is used to commit generated reports, not brokerage commands. No NextWise execution code exists.
 - The workflow uses Yahoo Finance research quotations and does not constitute an exchange-licensed market data feed.
