@@ -31,6 +31,12 @@ I don't have final answers to these questions. The repository records what I've 
 | [Portfolio snapshots](data/) | Record what NextWise showed at specific dates | Manual and user-confirmed, not a live brokerage feed |
 | [GitHub Actions](.github/workflows/) | Test code and review external market prices | CI working; portfolio NAV estimates are temporarily paused until post-trade data are reconciled |
 
+### Latest observation — 23 November 2026, 10:15 CET
+
+NextWise displays **€49,334.92** portfolio value and **−1.67%** cumulative performance. This is **€12.74 above** the last recorded 20 November evening NAV of €49,322.18. The 23 November screenshot comes from the *profile* page: it does **not** show the current cash amount, individual holdings or new transactions, so I have not extrapolated those values from the old screenshot.
+
+[23 November profile observation](reports/snapshots/NEXTWISE_PROFILE_2026-11-23_1015.md) · [Dated NAV observations](data/nextwise_nav_snapshots.csv).
+
 ### A portfolio example from the Trading Game
 
 The competition is played with **virtual money**. My starting allocation was **€50,000**, and the game runs from **5 October 2026 to 9 April 2027**.
