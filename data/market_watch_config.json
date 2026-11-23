@@ -1,0 +1,19 @@
+{
+  "read_only": true,
+  "enabled": true,
+  "portfolio_file": "data/positions_after_buys_2026-11-20.csv",
+  "position_quantity_column": "quantity_after_user_report",
+  "position_as_of": "2026-11-20",
+  "price_anchor_date": "2026-11-20",
+  "official_nav_anchor_eur": 49322.18,
+  "cash_eur_assumed_unchanged": 8336.86,
+  "official_nav_source": "NextWise portfolio screenshot 2026-11-20 18:05 CET; after 30 DSY sale and AD/UNA buys",
+  "data_provider": "Yahoo Finance via yfinance",
+  "currency_fx": "EURNOK=X is NOK per EUR; EQNR.OL quote is NOK; all other 22 tickers EUR",
+  "valuation_method": "NAV anchor + differences in 23 direct EUR quote marks since 2026-11-20 Yahoo close",
+  "data_caveat": "Indicative based on frozen 23 share quantities and cash; NOT a live or official NextWise NAV. External prices and corporate actions may differ from platform marks.",
+  "pending_order_states": [],
+  "manual_account_events_after_anchor": false,
+  "review_state": "ENABLED_FOR_EXTERNAL_PRICE_MONITOR_ONLY; separate old portfolio NAV workflow remains paused pending synchronized NextWise reconciliation",
+  "stopped_when": "User reports a new transaction, deposit, dividend posting, change in quantity, incomplete prices/FX, or material provider anomaly; update config and price basis before resuming"
+}
