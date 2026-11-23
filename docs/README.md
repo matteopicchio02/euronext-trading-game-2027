@@ -14,7 +14,7 @@ Some documents use formal finance terms such as *investment memo*, *policy* or *
 | Where the numbers come from | [Data dictionary](methodology/DATA_DICTIONARY.md) |
 | How I explored the data in Python | [Notebook guide](../notebooks/README.md) |
 | How I track real virtual-account changes | [Decision and transaction notes](governance/DECISION_LOG.md) |
-| How market-price updates are handled | [Daily-monitor guide](monitoring/DAILY_MONITOR.md) |
+| How the 23 stocks are followed automatically | [New 23-holding Market Watch](monitoring/MARKET_WATCH_23.md) |
 
 ## 1. Learning portfolio research
 
@@ -51,6 +51,9 @@ The research changed during November: an initial **26-stock draft**, earlier **1
 **Important:** all account values are virtual, dated and manually recorded. They are not continuous market data or a certified performance record.
 
 ## 4. Automated checks — and why some are paused
+
+- **[23-holding Market Watch](monitoring/MARKET_WATCH_23.md)**: new independent scheduled check of the currently recorded 23 stocks using public Yahoo prices and EUR/NOK conversion. Provides **indicative**, dated changes and research risk metrics; does not read NextWise or execute orders.
+- **[Market Watch GitHub Actions](../.github/workflows/market_watch_23.yml)**: scheduled end-of-day on weekdays. Output appears under [market_watch reports](../reports/market_watch/) **only after a successful run**.
 
 - [Daily portfolio monitor](monitoring/DAILY_MONITOR.md) uses historical public market prices. Its old portfolio baseline is **paused for reconciliation** because holdings changed.
 - [Daily-monitor workflow](../.github/workflows/daily_monitor.yml) is not a broker integration.
