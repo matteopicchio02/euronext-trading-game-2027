@@ -1,0 +1,69 @@
+name: Market Watch - 23 Holdings (public prices; no orders)
+
+on:
+  schedule:
+    # Europe is closed. 21:17 UTC = 22:17 CET / 23:17 CEST.
+    # GitHub may delay/skip schedule; this is not a live alert system.
+    - cron: "17 21 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write # only commits generated market-watch research reports
+
+concurrency:
+  group: project-alpha-market-watch
+  cancel-in-progress: false
+
+jobs:
+  market-prices:
+    name: Check 23 positions and EUR risk data
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout GitHub project
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install market data dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[data,dev]"
+
+      - name: Validate read-only portfolio ledger and market watch calculations
+        run: |
+          python -m pytest -q tests/test_holdings_market_watch.py
+
+      - name: Compute dated external market quotes and indicative risk
+        run: |
+          python -m scripts.holdings_market_watch
+        # All 23 closes, EUR/NOK, history and dates must be consistent.
+        # Missing/faulty data stop this job: no made-up NAV or fills.
+
+      - name: Archive research result for inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: project-alpha-market-watch
+          path: |
+            reports/market_watch/*.md
+            reports/market_watch/*.csv
+            reports/market_watch/*.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Commit only new dated research outputs
+        shell: bash
+        run: |
+          git config user.name "project-alpha-market-watch[bot]"
+          git config user.email "project-alpha-market-watch[bot]@users.noreply.github.com"
+          git add -- reports/market_watch/
+          if git diff --cached --quiet; then
+            echo "No research changes to commit."
+          else
+            git commit -m "research: update external-price market watch (NOT NextWise)"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
