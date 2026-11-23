@@ -29,7 +29,7 @@ I don't have final answers to these questions. The repository records what I've 
 | [Tests](tests/) | Check calculations, inputs and reconciliation of portfolio records | Automated regression tests |
 | [Research notes](docs/README.md) | Explain assumptions, investment ideas and decisions | Updated as the game progresses |
 | [Portfolio snapshots](data/) | Record what NextWise showed at specific dates | Manual and user-confirmed, not a live brokerage feed |
-| [GitHub Actions](.github/workflows/) | Test code and review external market prices | CI working; portfolio NAV estimates are temporarily paused until post-trade data are reconciled |
+| [GitHub Actions](.github/workflows/) | Run tests and scheduled research checks on public price data | **New 23-name market watch scheduled**; old 21-name NextWise-relative NAV estimator stays paused |
 
 ### Latest observation — 23 November 2026, 10:15 CET
 
@@ -58,6 +58,16 @@ If you're interested in the details:
 - [Post-trade quantities](data/positions_after_buys_2026-11-20.csv) — holdings count and quantities, without made-up current prices
 - [Transaction notes](data/trade_events_2026-11-20.csv) — what has and has not been confirmed
 - [Account reconciliation](reports/snapshots/EXECUTED_BUYS_2026-11-20_1805.md) — why cash movements and stock returns must be treated separately
+
+## Automated market-price follow-up (23 holdings)
+
+I have added a separate **read-only market watch for all 23 virtual holdings**, using their already recorded quantities and public Yahoo daily prices. It calculates daily EUR price changes, sector and risk contributions, concentration, volatility and a clearly labelled **indicative** portfolio value based on the last dated NextWise account snapshot.
+
+The [Market Watch workflow](.github/workflows/market_watch_23.yml) is scheduled after European trading closes on weekdays. Once a successful external data run occurs, its reports will be available in [reports/market_watch/](reports/market_watch/). Missing data will stop the workflow rather than produce an unreliable figure.
+
+**What does not update itself:** actual NextWise orders, fill prices, dividends and cash changes. I still need to add confirmed account events to the position ledger when they happen. The older **21-name daily NAV monitor stays paused** because its quantities are obsolete; it has not been silently replaced with fictitious per-stock platform valuations.
+
+[How the price monitor works and how to run it](docs/monitoring/MARKET_WATCH_23.md).
 
 ## Tools I'm learning to use
 
@@ -93,7 +103,7 @@ This last command uses a **dated 18 November portfolio snapshot** by default, no
 ## What I still want to improve
 
 1. **Reconcile the 23 current positions:** get consistent, dated position-level prices and confirmed individual Ahold/Unilever purchase prices.
-2. **Restart the portfolio monitor safely:** its old price baseline assumes an earlier portfolio and is intentionally paused to avoid misleading figures.
+2. **Validate the new 23-stock price watch:** compare its first completed Yahoo estimate with a dated NextWise account total; reactivate the older platform-anchored monitor only after complete synchronized input reconciliation.
 3. **Improve backtesting:** strengthen out-of-sample validation, benchmark comparisons and treatment of survivorship/selection bias.
 4. **Expand risk analysis:** study stress scenarios, currency exposure and why risk metrics can disagree when data or assumptions change.
 5. **Review results over time:** compare what I expected when making a decision with what actually happened.
