@@ -1,6 +1,6 @@
 {
-  "quote_date": "2026-11-23",
-  "generated_rome": "2026-11-23T22:36:37+01:00",
+  "quote_date": "2026-11-24",
+  "generated_rome": "2026-11-24T22:40:46+01:00",
   "source": "Third-party Yahoo Finance raw daily closing data (may be delayed), NOT NextWise",
   "execution": "NO ORDERS; read-only research",
   "note": "Price threshold is an analyst review trigger, not an order instruction",
@@ -8,9 +8,9 @@
     {
       "ticker": "AD.AS",
       "name": "Ahold Delhaize",
-      "close_eur": 34.560001,
+      "close_eur": 35.349998,
       "review_below_eur": 33.0,
-      "distance_pct": 4.7273,
+      "distance_pct": 7.1212,
       "status": "HELD_POSITION_MONITOR",
       "reported_held_quantity": 25,
       "reported_pending_quantity": null,
@@ -20,9 +20,9 @@
     {
       "ticker": "INGA.AS",
       "name": "ING Group",
-      "close_eur": 27.809999,
+      "close_eur": 27.215,
       "review_below_eur": 27.0,
-      "distance_pct": 3.0,
+      "distance_pct": 0.7963,
       "status": "WAIT",
       "reported_held_quantity": null,
       "reported_pending_quantity": null,
