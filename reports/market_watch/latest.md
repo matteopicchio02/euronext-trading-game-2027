@@ -1,4 +1,4 @@
-# Project Alpha — market price study (2026-11-25)
+# Project Alpha — market price study (2026-11-26)
 
 > **Student research estimate — NOT NextWise.** Public Yahoo daily prices,
 > 23 quantities frozen as of 2026-11-20;
@@ -7,68 +7,68 @@
 ## Indicative portfolio measures
 
 - Latest official **dated** NextWise NAV anchor: EUR 49,322.18.
-- **Indicative** NAV based on price differences since anchor: EUR 49,752.71.
-- Indicative price effect since the anchor: EUR +430.53.
-- Price effect over the latest common trading session: EUR -1.75.
+- **Indicative** NAV based on price differences since anchor: EUR 50,309.61.
+- Indicative price effect since the anchor: EUR +987.43.
+- Price effect over the latest common trading session: EUR +554.24.
 - Frozen assumed cash: EUR 8,336.86.
-- Yahoo direct NAV cross-check: EUR 49,754.43.
+- Yahoo direct NAV cross-check: EUR 50,311.33.
 - Baseline Yahoo-versus-NextWise difference: EUR +1.72.
 
 ## Historical risk analysis — model outputs only
 
-- Annualized volatility: 7.67%.
-- Parametric 1-day 95% VaR: EUR 395.51.
-- HHI (normalized equity weights): 0.04657.
-- Diversification ratio: 2.848.
-- Equity / cash on Yahoo mark basis: 83.24% / 16.76%.
-- Paris listed share of model NAV: 40.15% (internal monitor only).
-- EUR/NOK: 10.7593 NOK per EUR.
+- Annualized volatility: 7.74%.
+- Parametric 1-day 95% VaR: EUR 403.70.
+- HHI (normalized equity weights): 0.04655.
+- Diversification ratio: 2.835.
+- Equity / cash on Yahoo mark basis: 83.43% / 16.57%.
+- Paris listed share of model NAV: 40.21% (internal monitor only).
+- EUR/NOK: 10.7078 NOK per EUR.
 
 ## Biggest one-session contributions — not trades
 
 | Largest positive | Indicative EUR |
 |---|---:|
-| SAN.PA | +114.50 |
-| HEIA.AS | +27.26 |
-| UNA.AS | +24.00 |
-| RACE.MI | +22.50 |
-| SRG.MI | +20.83 |
+| PRY.MI | +110.16 |
+| ENX.PA | +48.00 |
+| CS.PA | +39.48 |
+| RACE.MI | +36.50 |
+| G.MI | +35.88 |
 
 | Largest negative | Indicative EUR |
 |---|---:|
-| PRY.MI | -95.76 |
-| AIR.PA | -25.48 |
-| G.MI | -23.92 |
-| CS.PA | -20.68 |
-| UCB.BR | -16.80 |
+| UNA.AS | -0.20 |
+| EQNR.OL | +1.64 |
+| LI.PA | +5.32 |
+| AD.AS | +5.75 |
+| DSY.PA | +9.00 |
 
 ## All holdings — external Yahoo marks
 
 | Ticker | Qty | Currency | Yahoo mark EUR | Day change EUR | Weight % |
 |---|---:|---|---:|---:|---:|
-| AI.PA | 12 | EUR | 2,261.52 | +4.08 | 4.55 |
-| AIR.PA | 7 | EUR | 1,330.00 | -25.48 | 2.67 |
-| CS.PA | 47 | EUR | 2,109.36 | -20.68 | 4.24 |
-| CAP.PA | 15 | EUR | 1,801.50 | +2.25 | 3.62 |
-| DSY.PA | 60 | EUR | 1,329.00 | -12.60 | 2.67 |
-| EDP.LS | 420 | EUR | 2,047.08 | -13.44 | 4.11 |
-| ENI.MI | 55 | EUR | 1,305.70 | -3.58 | 2.62 |
-| EQNR.OL | 49 | NOK | 1,751.54 | +12.91 | 3.52 |
-| ENX.PA | 12 | EUR | 2,010.00 | -16.80 | 4.04 |
-| RACE.MI | 5 | EUR | 1,828.50 | +22.50 | 3.68 |
-| G.MI | 52 | EUR | 2,229.24 | -23.92 | 4.48 |
-| HEIA.AS | 29 | EUR | 2,461.52 | +27.26 | 4.95 |
-| LI.PA | 14 | EUR | 531.16 | +1.96 | 1.07 |
-| KPN.AS | 462 | EUR | 2,004.62 | -1.39 | 4.03 |
-| OR.PA | 5 | EUR | 2,210.00 | +5.50 | 4.44 |
-| ML.PA | 62 | EUR | 1,929.44 | -6.20 | 3.88 |
-| PRY.MI | 18 | EUR | 1,676.16 | -95.76 | 3.37 |
-| SAN.PA | 25 | EUR | 2,454.00 | +114.50 | 4.93 |
-| SRG.MI | 336 | EUR | 2,032.80 | +20.83 | 4.09 |
-| TTE.PA | 26 | EUR | 2,009.28 | -10.40 | 4.04 |
-| UCB.BR | 7 | EUR | 1,998.50 | -16.80 | 4.02 |
-| AD.AS | 25 | EUR | 893.25 | +9.50 | 1.80 |
-| UNA.AS | 20 | EUR | 1,213.40 | +24.00 | 2.44 |
+| AI.PA | 12 | EUR | 2,283.84 | +22.32 | 4.54 |
+| AIR.PA | 7 | EUR | 1,356.88 | +26.88 | 2.70 |
+| CS.PA | 47 | EUR | 2,148.84 | +39.48 | 4.27 |
+| CAP.PA | 15 | EUR | 1,815.00 | +13.50 | 3.61 |
+| DSY.PA | 60 | EUR | 1,338.00 | +9.00 | 2.66 |
+| EDP.LS | 420 | EUR | 2,060.10 | +13.02 | 4.09 |
+| ENI.MI | 55 | EUR | 1,329.62 | +23.92 | 2.64 |
+| EQNR.OL | 49 | NOK | 1,755.85 | +1.64 | 3.49 |
+| ENX.PA | 12 | EUR | 2,058.00 | +48.00 | 4.09 |
+| RACE.MI | 5 | EUR | 1,865.00 | +36.50 | 3.71 |
+| G.MI | 52 | EUR | 2,265.12 | +35.88 | 4.50 |
+| HEIA.AS | 29 | EUR | 2,477.18 | +15.66 | 4.92 |
+| LI.PA | 14 | EUR | 536.48 | +5.32 | 1.07 |
+| KPN.AS | 462 | EUR | 2,022.17 | +17.56 | 4.02 |
+| OR.PA | 5 | EUR | 2,225.75 | +15.75 | 4.42 |
+| ML.PA | 62 | EUR | 1,958.58 | +29.14 | 3.89 |
+| PRY.MI | 18 | EUR | 1,786.32 | +110.16 | 3.55 |
+| SAN.PA | 25 | EUR | 2,470.75 | +16.75 | 4.91 |
+| SRG.MI | 336 | EUR | 2,061.02 | +28.22 | 4.10 |
+| TTE.PA | 26 | EUR | 2,037.36 | +28.08 | 4.05 |
+| UCB.BR | 7 | EUR | 2,010.40 | +11.90 | 4.00 |
+| AD.AS | 25 | EUR | 899.00 | +5.75 | 1.79 |
+| UNA.AS | 20 | EUR | 1,213.20 | -0.20 | 2.41 |
 
 ## Limitations and next research tasks
 
