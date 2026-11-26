@@ -1,4 +1,4 @@
-# Project Alpha — Candidate review levels (2026-11-25)
+# Project Alpha — Candidate review levels (2026-11-26)
 
 > **NO TRADES. NOT OFFICIAL NEXTWISE QUOTES OR AUTO-ORDER SIGNALS.**
 > A breached price level invites human review of EPS, valuation,
@@ -10,8 +10,8 @@
 
 | Candidate | Yahoo close EUR | Review at/below EUR | Distance to threshold | Status |
 |---|---:|---:|---:|---|
-| Ahold Delhaize (AD.AS) | 35.73 | 33.00 | +8.27% | HELD_POSITION_MONITOR |
-| ING Group (INGA.AS) | 26.38 | 27.00 | -2.31% | REVIEW_FUNDAMENTALS |
+| Ahold Delhaize (AD.AS) | 35.96 | 33.00 | +8.97% | HELD_POSITION_MONITOR |
+| ING Group (INGA.AS) | 26.83 | 27.00 | -0.61% | REVIEW_FUNDAMENTALS |
 
 If REVIEW_FUNDAMENTALS is shown, **do not place an order**.
 First re-check guidance, FY2027 EPS, valuation assumptions, portfolio risk and NextWise order permissions.
